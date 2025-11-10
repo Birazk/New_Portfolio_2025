@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Biraj Kharel</title>
+    <meta name="description" content="Photo gallery showcasing projects, simulations, and engineering work">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">BK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="gallery-header">
+        <div class="container">
+            <p class="section-label">Visual Portfolio</p>
+            <h1 class="section-title">Gallery</h1>
+            <p class="gallery-intro">Project photos, CAD renders, simulations, and behind-the-scenes moments</p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="projects">Projects</button>
+                <button class="filter-btn" data-filter="simulations">Simulations</button>
+                <button class="filter-btn" data-filter="renders">CAD Renders</button>
+                <button class="filter-btn" data-filter="workshop">Workshop</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">🚌</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Electric Bus</h3>
+                        <p>Converted electric bus in testing</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="renders">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">🎨</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>CAD Model</h3>
+                        <p>Modular vehicle chassis design</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="simulations">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">📊</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Thermal Simulation</h3>
+                        <p>Battery pack CFD analysis</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item" data-category="workshop">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">🔧</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Workshop</h3>
+                        <p>Motor installation process</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">🚗</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Modular Vehicle</h3>
+                        <p>Prototype in field testing</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item" data-category="simulations">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">⚡</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>MATLAB Simulation</h3>
+                        <p>Hybrid drivetrain optimization</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item" data-category="renders">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">🔋</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Battery Pack</h3>
+                        <p>3D render of battery assembly</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item" data-category="workshop">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">⚙️</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Assembly</h3>
+                        <p>Drivetrain integration work</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 9 -->
+                <div class="gallery-item" data-category="projects">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">📈</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Dashboard</h3>
+                        <p>Real-time diagnostics interface</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">‹</button>
+        <button class="lightbox-next">›</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image"></div>
+            <div class="lightbox-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
+            <p>Building smarter, cleaner systems for a sustainable future.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/gallery.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Biraj Kharel</title>
+    <meta name="description" content="Explore my engineering projects in electric vehicles, battery systems, and data-driven design.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">BK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <p class="section-label">Explore My Work</p>
+            <h1 class="section-title">Featured Projects</h1>
+            <p class="projects-intro">A showcase of engineering innovation in sustainable mobility and data-driven design</p>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                
+                <!-- Project 1: Electric Bus Conversion -->
+                <div class="project-card" data-project="electric-bus">
+                    <div class="project-image">
+                        <div class="image-placeholder">🚌</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Electric Bus Conversion</h3>
+                        <p>System-level design and conversion of conventional bus to electric drivetrain</p>
+                        <div class="project-tags">
+                            <span class="tag">EV Conversion</span>
+                            <span class="tag">System Design</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+
+                <!-- Project 2: Modular Vehicle Design -->
+                <div class="project-card" data-project="modular-vehicle">
+                    <div class="project-image">
+                        <div class="image-placeholder">🚗</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Modular Vehicle for Rural Areas</h3>
+                        <p>Adaptable vehicle platform designed for challenging terrain and diverse applications</p>
+                        <div class="project-tags">
+                            <span class="tag">Product Design</span>
+                            <span class="tag">CAD</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+
+                <!-- Project 3: Battery Thermal Management -->
+                <div class="project-card" data-project="battery-thermal">
+                    <div class="project-image">
+                        <div class="image-placeholder">🔋</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Battery Thermal Modeling</h3>
+                        <p>Simulation and optimization of battery thermal management systems using ANSYS</p>
+                        <div class="project-tags">
+                            <span class="tag">Simulation</span>
+                            <span class="tag">ANSYS</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+
+                <!-- Project 4: Hybrid Drivetrain Optimization -->
+                <div class="project-card" data-project="hybrid-optimization">
+                    <div class="project-image">
+                        <div class="image-placeholder">⚡</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Hybrid Drivetrain Optimization</h3>
+                        <p>Data-driven optimization strategies for hybrid vehicle performance</p>
+                        <div class="project-tags">
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">Data Analytics</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+
+                <!-- Project 5: Vehicle Diagnostics Dashboard -->
+                <div class="project-card" data-project="diagnostics-dashboard">
+                    <div class="project-image">
+                        <div class="image-placeholder">📊</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vehicle Diagnostics Dashboard</h3>
+                        <p>Real-time monitoring and visualization of vehicle performance metrics</p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+
+                <!-- Project 6: ICE to EV Conversion Project -->
+                <div class="project-card" data-project="ice-ev-conversion">
+                    <div class="project-image">
+                        <div class="image-placeholder">🔧</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ICE to EV Conversion</h3>
+                        <p>Complete electric drivetrain installation and integration for passenger vehicle</p>
+                        <div class="project-tags">
+                            <span class="tag">Hands-on</span>
+                            <span class="tag">Integration</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary view-details">View Details</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal Template -->
+    <div class="modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
+            <p>Building smarter, cleaner systems for a sustainable future.</p>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

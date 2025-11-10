@@ -1,0 +1,319 @@
+/* ===================================
+   PROJECTS PAGE STYLES
+   ==================================== */
+
+.projects-header {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    transition: background-color var(--transition-medium);
+}
+
+.projects-intro {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.project-card {
+    background-color: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image .image-placeholder {
+    font-size: 5rem;
+    opacity: 0.9;
+}
+
+.project-content {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.tag {
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-card .btn {
+    margin: 0 var(--spacing-lg) var(--spacing-lg);
+    width: calc(100% - 2 * var(--spacing-lg));
+    text-align: center;
+}
+
+/* ===================================
+   MODAL STYLES
+   ==================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--bg-secondary);
+    max-width: 900px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    animation: modalSlideIn 0.3s ease;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--bg-tertiary);
+    border: none;
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: var(--spacing-2xl);
+}
+
+.modal-header {
+    margin-bottom: var(--spacing-xl);
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.modal-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.modal-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.modal-section h3 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.modal-section p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.tool-item {
+    background-color: var(--bg-tertiary);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.tool-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.tool-name {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.metric-card {
+    background-color: var(--bg-tertiary);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.metric-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.demo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.demo-button::before {
+    content: '▶';
+    font-size: 1rem;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   ==================================== */
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        margin: 20px;
+        max-width: calc(100% - 40px);
+    }
+    
+    .modal-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .modal-title {
+        font-size: 1.6rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
