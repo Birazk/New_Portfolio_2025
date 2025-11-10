@@ -7,18 +7,18 @@
  * 2. Applies theme on page load
  * 3. Toggles theme when button is clicked
  * 4. Saves preference to localStorage for persistence across pages
+ * 5. CSS handles icon visibility automatically based on data-theme attribute
  */
 
 // Get theme toggle button
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.querySelector('.theme-icon');
 
 // Check for saved theme preference or default to 'light'
 const currentTheme = localStorage.getItem('theme') || 'light';
 
 // Apply saved theme on page load
 document.documentElement.setAttribute('data-theme', currentTheme);
-updateThemeIcon(currentTheme);
+updateThemeLabel(currentTheme);
 
 // Toggle theme when button is clicked
 themeToggle.addEventListener('click', () => {
@@ -34,20 +34,20 @@ themeToggle.addEventListener('click', () => {
     // Save to localStorage
     localStorage.setItem('theme', newTheme);
     
-    // Update icon
-    updateThemeIcon(newTheme);
+    // Update aria label
+    updateThemeLabel(newTheme);
 });
 
 /**
- * Update theme icon based on current theme
+ * Update theme button aria-label for accessibility
  * @param {string} theme - Current theme ('light' or 'dark')
  */
-function updateThemeIcon(theme) {
-    if (theme === 'dark') {
-        themeIcon.textContent = '☀️';
-        themeToggle.setAttribute('aria-label', 'Switch to light mode');
-    } else {
-        themeIcon.textContent = '🌙';
-        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+function updateThemeLabel(theme) {
+    if (themeToggle) {
+        if (theme === 'dark') {
+            themeToggle.setAttribute('aria-label', 'Switch to light mode');
+        } else {
+            themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+        }
     }
 }

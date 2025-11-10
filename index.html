@@ -6,13 +6,24 @@
     <title>Biraj Kharel | Mechanical Engineer & Data Analyst</title>
     <meta name="description" content="Portfolio of Biraj Kharel - Mechanical Engineer specializing in electric vehicles, sustainable energy systems, and data analytics.">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar glass-effect">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">BK</a>
+                <a href="index.html">
+                    <span class="logo-text">Biraj</span>
+                    <span class="logo-accent">Kharel</span>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
@@ -21,8 +32,21 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
+            <button class="theme-toggle glass-effect" id="themeToggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
             </button>
             <div class="hamburger">
                 <span></span>
@@ -32,215 +56,394 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="hero-greeting">Hello, I'm</p>
-            <h1 class="hero-title">Biraj Kharel</h1>
-            <p class="hero-subtitle">Mechanical Engineer building smarter, cleaner, and data-driven systems</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/birajkharel" target="_blank" aria-label="LinkedIn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
-                <a href="https://github.com/birajkharel" target="_blank" aria-label="GitHub">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a>
-                <a href="mailto:kharelbiraz@gmail.com" aria-label="Email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="profile-circle"></div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Hero Section with Modern Design -->
+    <section class="hero-modern">
         <div class="container">
-            <p class="section-label">Get To Know More</p>
-            <h2 class="section-title">About My Journey</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <div class="image-placeholder"></div>
-                </div>
-                <div class="about-text">
-                    <div class="about-cards">
-                        <div class="info-card">
-                            <div class="card-icon">📊</div>
-                            <h3>Experience</h3>
-                            <p>2+ years</p>
-                            <p class="card-subtitle">Research Engineer</p>
+            <div class="hero-grid">
+                <div class="hero-content" data-aos="fade-right">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Available for collaboration</span>
+                    </div>
+                    <h1 class="hero-main-title">
+                        Designing the Future of
+                        <span class="gradient-text">Sustainable Mobility</span>
+                    </h1>
+                    <p class="hero-lead">
+                        Mechanical Engineer & Data Analyst specializing in electric vehicle systems, 
+                        battery optimization, and intelligent transportation solutions.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3>2+</h3>
+                            <p>Years Experience</p>
                         </div>
-                        <div class="info-card">
-                            <div class="card-icon">🎓</div>
-                            <h3>Education</h3>
-                            <p>B.E. Mechanical</p>
-                            <p class="card-subtitle">Engineering</p>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <h3>6+</h3>
+                            <p>Major Projects</p>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>Commitment</p>
                         </div>
                     </div>
-                    <p class="about-description">
-                        I'm a mechanical engineer and data analyst passionate about sustainable energy systems, 
-                        electric vehicle conversion, and data-driven design. I specialize in bridging hardware 
-                        innovation with software intelligence to build smart, resilient mobility solutions.
-                    </p>
-                    <p class="about-description">
-                        I've worked on modular vehicle design, ICE-to-EV conversion, battery thermal modeling, 
-                        and predictive analytics for real-world energy optimization.
-                    </p>
-                    <a href="timeline.html" class="btn btn-primary">View My Timeline →</a>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-gradient">Let's Connect</a>
+                        <a href="#projects-preview" class="btn btn-outline">
+                            <span>View Work</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="social-links-modern">
+                        <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-btn" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/birajkharel" target="_blank" class="social-btn" aria-label="GitHub">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:kharelbiraz@gmail.com" class="social-btn" aria-label="Email">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-aos="fade-left">
+                    <div class="visual-card glass-effect">
+                        <div class="card-decoration"></div>
+                        <div class="profile-section">
+                            <div class="profile-avatar"></div>
+                            <h3>Biraj Kharel</h3>
+                            <p>Research Engineer, ESTRL</p>
+                        </div>
+                        <div class="specializations">
+                            <div class="spec-tag">Electric Vehicles</div>
+                            <div class="spec-tag">Battery Systems</div>
+                            <div class="spec-tag">Data Analytics</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Carousel Section -->
-    <section class="skills">
+    <!-- About Section - Enhanced -->
+    <section id="about" class="about-enhanced">
         <div class="container">
-            <p class="section-label">Get to know my</p>
-            <h2 class="section-title">Tech Stack</h2>
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title-modern">Bridging Engineering Innovation with Data Intelligence</h2>
+                <p class="section-description">
+                    Transforming sustainable mobility through intelligent design and data-driven optimization
+                </p>
+            </div>
             
-            <div class="skills-carousel">
-                <button class="carousel-btn prev" aria-label="Previous skills">‹</button>
-                <div class="carousel-container">
-                    <div class="carousel-track" id="skillsTrack">
-                        <!-- Engineering Skills -->
-                        <div class="skill-card">
-                            <div class="skill-icon">🔧</div>
-                            <h3>Fusion 360</h3>
-                            <p class="skill-level">Experienced</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
+            <div class="about-grid">
+                <div class="about-main-content">
+                    <div class="content-block">
+                        <h3>My Expertise</h3>
+                        <p>
+                            As a mechanical engineer and data analyst, I specialize in creating sustainable transportation 
+                            solutions that combine cutting-edge hardware design with intelligent software systems. My work 
+                            focuses on electric vehicle conversion, battery thermal management, and predictive analytics 
+                            for energy optimization.
+                        </p>
+                    </div>
+                    <div class="content-block">
+                        <h3>What Drives Me</h3>
+                        <p>
+                            I'm passionate about building resilient, eco-friendly mobility solutions for emerging markets. 
+                            From converting conventional vehicles to electric powertrains to designing modular platforms 
+                            for rural areas, I tackle real-world challenges with innovative engineering approaches.
+                        </p>
+                    </div>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <h4>EV Systems Design</h4>
+                            <p>Complete vehicle conversion & powertrain optimization</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                                    <line x1="16" y1="8" x2="2" y2="22"></line>
+                                    <line x1="17.5" y1="15" x2="9" y2="15"></line>
+                                </svg>
+                            </div>
+                            <h4>Simulation & Modeling</h4>
+                            <p>ANSYS CFD, MATLAB/Simulink for thermal & performance analysis</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <h4>Data-Driven Optimization</h4>
+                            <p>Python, Power BI for vehicle diagnostics & predictive maintenance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-sidebar">
+                    <div class="timeline-card glass-effect">
+                        <h4>Current Role</h4>
+                        <div class="timeline-item-modern">
+                            <div class="timeline-dot active"></div>
+                            <div>
+                                <h5>Research Engineer</h5>
+                                <p>ESTRL, Dhulikhel</p>
+                                <span>Aug 2023 - Present</span>
                             </div>
                         </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">⚙️</div>
-                            <h3>ANSYS</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;"></div>
+                        <a href="timeline.html" class="link-arrow">View Full Timeline</a>
+                    </div>
+                    
+                    <div class="education-card glass-effect">
+                        <h4>Education</h4>
+                        <div class="edu-item">
+                            <div class="edu-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
                             </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">📐</div>
-                            <h3>MATLAB</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🎨</div>
-                            <h3>Blender</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">📏</div>
-                            <h3>AutoCAD</h3>
-                            <p class="skill-level">Basic</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🤖</div>
-                            <h3>ROS</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <!-- Data Analysis Skills -->
-                        <div class="skill-card">
-                            <div class="skill-icon">🐍</div>
-                            <h3>Python</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">📊</div>
-                            <h3>Excel</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">📈</div>
-                            <h3>Power BI</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🌿</div>
-                            <h3>Git</h3>
-                            <p class="skill-level">Intermediate</p>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%;"></div>
+                            <div>
+                                <h5>B.E. Mechanical Engineering</h5>
+                                <p>2018 - 2023</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn next" aria-label="Next skills">›</button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Certifications Section -->
+    <section class="certifications">
         <div class="container">
-            <p class="section-label">Get in Touch</p>
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title-modern">Certifications & Training</h2>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-card glass-effect">
+                    <div class="cert-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                         </svg>
                     </div>
-                    <h3>Email</h3>
-                    <a href="mailto:kharelbiraz@gmail.com">kharelbiraz@gmail.com</a>
+                    <h3>Professional Engineer</h3>
+                    <p>Mechanical Engineering</p>
+                    <span class="cert-year">2023</span>
                 </div>
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                
+                <div class="cert-card glass-effect">
+                    <div class="cert-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                         </svg>
                     </div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://www.linkedin.com/in/birajkharel" target="_blank">Connect with me</a>
+                    <h3>EV System Design</h3>
+                    <p>Electric Vehicle Technology</p>
+                    <span class="cert-year">2022</span>
+                </div>
+                
+                <div class="cert-card glass-effect">
+                    <div class="cert-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>Python & Power BI</p>
+                    <span class="cert-year">2021</span>
+                </div>
+                
+                <div class="cert-card glass-effect">
+                    <div class="cert-badge">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                    </div>
+                    <h3>CAD/CAM</h3>
+                    <p>Fusion 360 & SolidWorks</p>
+                    <span class="cert-year">2020</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section - Visual Redesign -->
+    <section class="skills-modern">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Skills</span>
+                <h2 class="section-title-modern">Tools & Technologies</h2>
+            </div>
+            
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3>Engineering & Design</h3>
+                    <div class="skill-items">
+                        <div class="skill-badge">Fusion 360</div>
+                        <div class="skill-badge">ANSYS</div>
+                        <div class="skill-badge">MATLAB/Simulink</div>
+                        <div class="skill-badge">Blender</div>
+                        <div class="skill-badge">AutoCAD</div>
+                        <div class="skill-badge">SolidWorks</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data & Analytics</h3>
+                    <div class="skill-items">
+                        <div class="skill-badge">Python</div>
+                        <div class="skill-badge">Pandas</div>
+                        <div class="skill-badge">NumPy</div>
+                        <div class="skill-badge">Power BI</div>
+                        <div class="skill-badge">Excel</div>
+                        <div class="skill-badge">Tableau</div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Development & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-badge">Git</div>
+                        <div class="skill-badge">ROS</div>
+                        <div class="skill-badge">Linux</div>
+                        <div class="skill-badge">Arduino</div>
+                        <div class="skill-badge">LabVIEW</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Enhanced -->
+    <section id="contact" class="contact-modern">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title-modern">Let's Work Together</h2>
+                        <p class="section-description">
+                            Have a project in mind or want to collaborate? I'm always open to discussing 
+                            new opportunities in sustainable mobility and data-driven engineering.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:kharelbiraz@gmail.com">kharelbiraz@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/birajkharel" target="_blank">Connect with me</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Dhulikhel, Nepal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper glass-effect">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gradient">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
-            <p>Building smarter, cleaner systems for a sustainable future.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Biraj Kharel</h3>
+                    <p>Building smarter, cleaner systems for a sustainable future.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="timeline.html">Timeline</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="js/theme.js"></script>
-    <script src="js/carousel.js"></script>
     <script>
         // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
@@ -251,12 +454,17 @@
             navMenu.classList.toggle('active');
         });
         
-        // Close menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
             });
+        });
+
+        // Contact form handling (placeholder)
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form. In production, this would send an email.');
         });
     </script>
 </body>
