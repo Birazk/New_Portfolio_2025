@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydropower Sustainability Review | Biraj Kharel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <style>
+        /* ADDING HELPER STYLES - You can move these to your CSS file */
+
+        /* --- JUSTIFICATION STYLES --- */
+        .project-subtitle-large,
+        .project-main-content p,
+        .responsibilities-list li,
+        .outcomes-list li {
+            text-align: justify;
+            hyphens: auto; /* Improves spacing in justified text */
+        }
+        
+        /* --- OTHER STYLES (from previous version) --- */
+        .analysis-subsection {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .analysis-subsection h4 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+        }
+        .visual-placeholder {
+            border: 2px dashed var(--border-color);
+            background-color: var(--body-bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        .outcomes-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+        .outcomes-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 1rem;
+        }
+        .outcomes-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+        
+        <!-- Logo -->
+        <div class="nav-logo">
+            <a href="index.html">
+                <span class="logo-text">Biraj</span>
+                <span class="logo-accent">Kharel</span>
+            </a>
+        </div>
+        
+        <!-- Menu Links -->
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../timeline.html">Timeline</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- ===================================
+       2. PROJECT HERO SECTION
+       ==================================== -->
+    <header class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-tags">
+                <span class="tag">Sustainable Manufacturing</span>
+                <span class="tag">Hydropower</span>
+                <span class="tag">Life Cycle Assessment</span>
+            </div>
+            <h1 class="project-title-large">Sustainable Manufacturing in Hydropower</h1>
+            <p class="project-subtitle-large">
+                A comprehensive academic review of eco-friendly strategies, materials, and technologies designed to minimize the environmental footprint of the hydropower manufacturing industry.
+            </p>
+        </div>
+    </header>
+
+    <!-- ===================================
+       3. MAIN PROJECT CONTENT
+       ==================================== -->
+    <main class="project-detail-container">
+        <!-- Main Project Image -->
+        <div class="project-main-image">
+             <!-- SUGGESTION: Add a hero image here. See recommendations at the top. -->
+             <!-- Example: <img src="../project images/hydropower-hero.jpg" alt="A hydropower dam in a lush, sustainable environment"> -->
+        </div>
+
+        <!-- Two-Column Layout -->
+        <div class="project-layout">
+
+            <!-- Left Column: The Story -->
+            <div class="project-main-content">
+                
+                <div class="content-card">
+                    <section id="challenge">
+                        <h2>The Challenge: Greening a Green Industry</h2>
+                        <p>Hydropower is a cornerstone of renewable energy, yet the manufacturing of its components, from massive turbines to reinforced concrete dams, carries a significant environmental cost. The industry has traditionally relied on energy-intensive processes and materials with large carbon footprints. The core challenge was to systematically investigate, collate, and analyze modern, sustainable practices that could transform the entire manufacturing lifecycle.</p>
+                        <p>This research aimed to create a holistic framework by reviewing existing literature on innovative approaches like Additive Manufacturing, sustainable material science, and comprehensive Life Cycle Assessments (LCA) to guide the industry toward a truly sustainable future.</p>
+                    </section>
+                </div>
+
+                <div class="content-card">
+                    <section id="role">
+                        <h2>My Role: Research Contributor & Co-Author</h2>
+                        <p>As a key member of this team, I played an integral role in the development and publication of this academic review. My responsibilities included:</p>
+                        <ul class="responsibilities-list">
+                            <li><strong>Literature Review & Synthesis:</strong> Conducted extensive searches of academic databases to identify key research on sustainable manufacturing, material science, and energy-efficient processes relevant to the hydropower sector.</li>
+                            <li><strong>Framework Analysis:</strong> Analyzed and synthesized findings from diverse sources to help build a coherent framework, identifying trends, gaps, and best practices in the field.</li>
+                            <li><strong>Content Contribution:</strong> Authored and co-authored specific sections of the paper, focusing on areas such as advanced manufacturing technologies and the role of regulatory standards.</li>
+                            <li><strong>Collaborative Writing & Editing:</strong> Worked closely with fellow researchers to draft, review, and refine the manuscript for clarity, accuracy, and academic rigor, leading to its publication.</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="content-card">
+                    <section id="analysis">
+                        <h2>A Framework for Sustainability: Key Research Areas</h2>
+                        <p class="section-intro">This review did not involve direct simulation but instead focused on synthesizing existing data and case studies to identify three critical pillars for sustainable hydropower manufacturing.</p>
+                        
+                        <!-- SUBSECTION 1: LIFE CYCLE ASSESSMENT -->
+                        <div class="analysis-feature-block">
+                            <div class="analysis-text-featured">
+                                <h4>1. Life Cycle Assessment (LCA)</h4>
+                                <p>A primary finding was the critical importance of adopting a cradle-to-grave perspective. LCA provides a holistic view of the environmental footprint, evaluating everything from raw material extraction and manufacturing to long-term operation and eventual decommissioning. Our review emphasized that a process-based LCA is essential for identifying the highest-impact areas and making data-driven decisions to enhance eco-efficiency.</p>
+                            </div>
+                            <div class="analysis-visual-featured image-zoom-wrapper">
+                                 <!-- SUGGESTION: Insert your diagram for LCA here. -->
+                                <img src="../project images/LCA Hydroplant.png" alt="Diagram showing the stages of a Life Cycle Assessment: Raw Materials, Production, Transportation, Use, and Disposal">
+                            </div>
+                        </div>
+
+                        <!-- SUBSECTION 2: ADVANCED MANUFACTURING -->
+                        <div class="analysis-feature-block">
+                            <div class="analysis-text-featured">
+                                <h4>2. Advanced Manufacturing Processes</h4>
+                                <p>We identified a significant opportunity to reduce waste and energy consumption by moving beyond traditional methods. Technologies like **Additive Manufacturing (3D Printing)** enable the creation of complex turbine parts with minimal material waste, while optimizing **CNC Machining** toolpaths and utilizing low-power states can drastically cut energy use. These innovations are key to making the manufacturing process both economically and environmentally viable.</p>
+                            </div>
+                            <div class="analysis-visual-featured image-zoom-wrapper">
+                                <!-- SUGGESTION: Insert an image of Additive Manufacturing or CNC here. -->
+                                <img src="../project images/manufacturing process.png" alt="An industrial 3D printer creating a complex metal turbine component layer by layer">
+                            </div>
+                        </div>
+
+                        <!-- SUBSECTION 3: SUSTAINABLE MATERIALS -->
+                        <div class="analysis-feature-block">
+                            <div class="analysis-text-featured">
+                                <h4>3. Sustainable Material Selection</h4>
+                                <p>The materials used are central to the industry's environmental impact. Our research highlighted the benefits of using **recycled steel** for penstocks, developing **eco-efficient concrete** with recycled aggregates for dams, and deploying **bio-based lubricants** for hydraulic systems. These alternatives not only reduce carbon emissions but also minimize harm to aquatic ecosystems in case of leaks.</p>
+                            </div>
+                            <div class="analysis-visual-featured image-zoom-wrapper">
+                                <!-- SUGGESTION: Insert an image showcasing sustainable materials. -->
+                                <!-- <img src="../project images/placeholder-sustainable-materials.png" alt="A collection of sustainable industrial materials including recycled metal and eco-concrete samples"> -->
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+
+                <div class="content-card">
+                    <section id="conclusion">
+                        <h2>Conclusion & Project Impact</h2>
+                        <p>This research consolidates a wide range of strategies into a clear, actionable framework for sustainable manufacturing in the hydropower industry. By outlining the best practices in materials, processes, and lifecycle analysis, the paper serves as a valuable resource for engineers, policymakers, and industry stakeholders.</p>
+
+                        <ul class="outcomes-list">
+                            <li><strong>Holistic Framework Developed:</strong> Produced a comprehensive review that synthesizes disparate research into a cohesive guide for sustainability.</li>
+                            <li><strong>Key Technologies Identified:</strong> Highlighted the high-impact potential of advanced manufacturing and sustainable material science in reducing the industry's carbon footprint.</li>
+                            <li><strong>Emphasized Policy & Standards:</strong> Underscored the crucial role of regulatory frameworks like ISO 14001 in driving industry-wide adoption of sustainable practices.</li>
+                            <li><strong>Academic Contribution:</strong> Published in the IOP Conference Series, this work contributes to the academic discourse and provides a foundation for future research.</li>
+                        </ul>
+                         <p>Ultimately, this project provides an intellectual blueprint for evolving the hydropower industry, ensuring that its contribution to a clean energy future is matched by an equally clean and responsible manufacturing ecosystem.</p>
+                    </section>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Quick Facts (Sticky Sidebar) -->
+            <aside class="project-sidebar">
+    
+                <div class="sidebar-sticky-wrapper">
+
+                    <!-- Card 1: Detailed Project Snapshot -->
+                    <div class="sidebar-card">
+                        <h3>📊 Project Snapshot</h3>
+                        <ul class="snapshot-list">
+                            <li>
+                                <span class="info-label">Timeline</span>
+                                <span class="#">6 Months</span>
+                            </li>
+                            <li>
+                                <span class="info-label">Type</span>
+                                <span class="#"> Research Publication</span>
+                            </li>
+                            <li>
+                                <span class="info-label">Key Skills</span>
+                                <span class="#">Literature Review, Technical Writing, Data Synthesis</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Tools & Technologies -->
+                    <div class="sidebar-card">
+                        <h3>🛠️ Tools & Technologies</h3>
+                        <ul class="tool-list">
+                            <li><span class="tool-icon">📚</span>Scopus & Web of Science</li>
+                            <li><span class="tool-icon">✒️</span>Mendeley (Reference Manager)</li>
+                            <li><span class="tool-icon">📈</span>MS Office Suite</li>
+                            <li><span class="tool-icon">🤝</span>Collaborative Research Platforms</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Card 3: Project Links -->
+                    <div class="sidebar-card">
+                        <h3>🔗 Project Links</h3>
+                         <!-- SUGGESTION: Replace '#' with the actual DOI link to your paper -->
+                        <a href="https://doi.org/10.1088/1755-1315/1385/1/012017" class="sidebar-button" target="_blank">View Full Publication</a>
+                    </div>
+
+                </div>
+
+                <a href="../projects.html" class="back-link">&larr; Back to All Projects</a>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer etc. -->
+<footer class="footer-modern">
+    <div class="container">
+        
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top" aria-label="Back to top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+        </a>
+
+        <!-- Main Footer Content Grid -->
+        <div class="footer-content">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-brand">
+                <h3 class="footer-logo">Biraj Kharel</h3>
+                <p>Building smarter, cleaner systems for a sustainable future.</p>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../timeline.html">Timeline</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Social Media -->
+            <div class="footer-social">
+                <h4 class="footer-heading">Connect</h4>
+                <div class="social-icon-group">
+                    <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/birajkharel" target="_blank" class="social-icon" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Bottom Bar with Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- Lightbox Modal Structure -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Enlarged project visual">
+        </div>
+    </div>
+
+    <script>
+    // LIGHTBOX FUNCTIONALITY SCRIPT
+    document.addEventListener('DOMContentLoaded', () => {
+        const imageWrappers = document.querySelectorAll('.image-zoom-wrapper');
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        if (!imageWrappers.length || !lightboxOverlay || !lightboxImage || !lightboxClose) {
+            return;
+        }
+
+        const openLightbox = (e) => {
+            const imageElement = e.currentTarget.querySelector('img');
+            if (imageElement) {
+                lightboxImage.src = imageElement.src;
+                lightboxOverlay.style.display = 'flex';
+            }
+        };
+
+        const closeLightbox = () => {
+            lightboxOverlay.style.display = 'none';
+        };
+
+        imageWrappers.forEach(wrapper => {
+            wrapper.addEventListener('click', openLightbox);
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target === lightboxOverlay) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

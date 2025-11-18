@@ -1,21 +1,15 @@
 /**
- * Gallery Functionality
+ * Gallery Functionality (Corrected Version)
  * - Category filtering
  * - Lightbox view for images
  * - Keyboard navigation
- * 
- * HOW TO ADD NEW IMAGES:
- * 1. Add gallery-item div in gallery.html
- * 2. Set data-category attribute (projects, simulations, renders, workshop)
- * 3. Add title and description in gallery-overlay
- * 4. This script will automatically handle filtering and lightbox
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.querySelector('.lightbox-image');
+    const lightboxImageContainer = document.querySelector('.lightbox-image'); // Renamed for clarity
     const lightboxTitle = document.querySelector('.lightbox-caption h3');
     const lightboxDesc = document.querySelector('.lightbox-caption p');
     const closeBtn = document.querySelector('.lightbox-close');
@@ -25,33 +19,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let visibleItems = Array.from(galleryItems);
     
-    // Filter functionality
+    // --- Filter functionality (This part is correct and unchanged) ---
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
-            
-            // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             
-            // Filter items
             visibleItems = [];
             galleryItems.forEach(item => {
                 const category = item.getAttribute('data-category');
-                
-                if (filter === 'all' || category === filter) {
-                    item.classList.remove('hidden');
+                const isVisible = filter === 'all' || category === filter;
+                item.style.display = isVisible ? 'block' : 'none'; // Use display instead of a class for simplicity
+                if (isVisible) {
                     visibleItems.push(item);
-                } else {
-                    item.classList.add('hidden');
                 }
             });
         });
     });
     
-    // Open lightbox when clicking gallery item
-    galleryItems.forEach((item, index) => {
+    // --- Open lightbox when clicking a gallery item ---
+    galleryItems.forEach(item => {
         item.addEventListener('click', () => {
+            // Find the index of the clicked item within the *currently visible* items
             currentIndex = visibleItems.indexOf(item);
             if (currentIndex !== -1) {
                 openLightbox();
@@ -59,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Close lightbox
+    // --- Close lightbox events ---
     closeBtn.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => {
         if (e.target === lightbox) {
@@ -67,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Navigation buttons
+    // --- Navigation button events ---
     prevBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         showPrevImage();
@@ -78,35 +68,44 @@ document.addEventListener('DOMContentLoaded', () => {
         showNextImage();
     });
     
-    // Keyboard navigation
+    // --- Keyboard navigation ---
     document.addEventListener('keydown', (e) => {
         if (!lightbox.classList.contains('active')) return;
         
-        if (e.key === 'Escape') {
-            closeLightbox();
-        } else if (e.key === 'ArrowLeft') {
-            showPrevImage();
-        } else if (e.key === 'ArrowRight') {
-            showNextImage();
-        }
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowLeft') showPrevImage();
+        else if (e.key === 'ArrowRight') showNextImage();
     });
     
     /**
-     * Open lightbox and display current image
+     * ==========================================================
+     * THE CORRECTED FUNCTION TO OPEN THE LIGHTBOX
+     * ==========================================================
      */
     function openLightbox() {
         const item = visibleItems[currentIndex];
-        const imagePlaceholder = item.querySelector('.image-placeholder').cloneNode(true);
+        
+        // CHANGE 1: Find the actual <img> tag inside the clicked item
+        const imageElement = item.querySelector('.gallery-image img');
+        
+        // CHANGE 2: Get the text content from the overlay
         const title = item.querySelector('.gallery-overlay h3').textContent;
         const desc = item.querySelector('.gallery-overlay p').textContent;
         
-        lightboxImage.innerHTML = '';
-        lightboxImage.appendChild(imagePlaceholder);
+        // CHANGE 3: Create a new image element for the lightbox to display the full picture
+        const newImage = document.createElement('img');
+        newImage.src = imageElement.src; // Use the same source as the thumbnail
+        newImage.alt = imageElement.alt; // Copy the alt text
+        
+        // Populate the lightbox
+        lightboxImageContainer.innerHTML = ''; // Clear previous image
+        lightboxImageContainer.appendChild(newImage); // Add the new full-size image
         lightboxTitle.textContent = title;
         lightboxDesc.textContent = desc;
         
+        // Show the lightbox
         lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
     
     /**
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function closeLightbox() {
         lightbox.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
     }
     
     /**

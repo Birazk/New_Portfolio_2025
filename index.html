@@ -17,44 +17,45 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar glass-effect">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <span class="logo-text">Biraj</span>
-                    <span class="logo-accent">Kharel</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-            <button class="theme-toggle glass-effect" id="themeToggle" aria-label="Toggle dark mode">
-                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="5"></circle>
-                    <line x1="12" y1="1" x2="12" y2="3"></line>
-                    <line x1="12" y1="21" x2="12" y2="23"></line>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                    <line x1="1" y1="12" x2="3" y2="12"></line>
-                    <line x1="21" y1="12" x2="23" y2="12"></line>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                </svg>
-                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <nav class="navbar">
+    <div class="nav-container">
+        
+        <!-- Logo -->
+        <div class="nav-logo">
+            <a href="index.html">
+                <span class="logo-text">Biraj</span>
+                <span class="logo-accent">Kharel</span>
+            </a>
         </div>
-    </nav>
+        
+        <!-- Menu Links -->
+        <ul class="nav-menu">
+            <!-- NOTE: The 'active' class will be added by JavaScript automatically -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section with Modern Design -->
     <section class="hero-modern">
@@ -67,11 +68,11 @@
                     </div>
                     <h1 class="hero-main-title">
                         Designing the Future of
-                        <span class="gradient-text">Sustainable Mobility</span>
+                        <span class="gradient-text">Sustainable Energy Systems</span>
                     </h1>
                     <p class="hero-lead">
-                        Mechanical Engineer & Data Analyst specializing in electric vehicle systems, 
-                        battery optimization, and intelligent transportation solutions.
+                        Mechanical Engineer & Data Analyst specializing in Simulation and Experimentation, EV systems, 
+                        Battery Optimization, and Renewable Energy Systems.
                     </p>
                     <div class="hero-stats">
                         <div class="stat-item">
@@ -80,7 +81,7 @@
                         </div>
                         <div class="stat-divider"></div>
                         <div class="stat-item">
-                            <h3>6+</h3>
+                            <h3>5+</h3>
                             <p>Major Projects</p>
                         </div>
                         <div class="stat-divider"></div>
@@ -91,8 +92,8 @@
                     </div>
                     <div class="hero-cta">
                         <a href="#contact" class="btn btn-gradient">Let's Connect</a>
-                        <a href="#projects-preview" class="btn btn-outline">
-                            <span>View Work</span>
+                        <a href="Biraj-Kharel-CV.pdf" class="btn btn-outline">
+                            <span>My CV</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -122,7 +123,9 @@
                     <div class="visual-card glass-effect">
                         <div class="card-decoration"></div>
                         <div class="profile-section">
-                            <div class="profile-avatar"></div>
+                            <div class="profile-avatar">
+                                <img src="Index photos\birazshey1.png" alt="">
+                            </div>
                             <h3>Biraj Kharel</h3>
                             <p>Research Engineer, ESTRL</p>
                         </div>
@@ -144,7 +147,10 @@
                 <span class="section-tag">Who I Am</span>
                 <h2 class="section-title-modern">Bridging Engineering Innovation with Data Intelligence</h2>
                 <p class="section-description">
-                    Transforming sustainable mobility through intelligent design and data-driven optimization
+                    A mechanical engineer and data analyst who builds renewable energy systems for the future. 
+                    My work is where physical hardware meets digital intelligence. 
+                    I design, model, and optimize integrated systems, 
+                    ensuring they operate with maximum efficiency and reliability.
                 </p>
             </div>
             
@@ -153,11 +159,26 @@
                     <div class="content-block">
                         <h3>My Expertise</h3>
                         <p>
-                            As a mechanical engineer and data analyst, I specialize in creating sustainable transportation 
-                            solutions that combine cutting-edge hardware design with intelligent software systems. My work 
-                            focuses on electric vehicle conversion, battery thermal management, and predictive analytics 
-                            for energy optimization.
+                            I bring a holistic approach to renewable energy, 
+                            using modern tools to design and manage systems from the ground up.
                         </p>
+                        <br>
+
+                            <h4>Renewable System Design & Integration</h4>
+                            <p>I specialize in designing cohesive energy ecosystems that combine different sources—like solar and micro-hydro—with energy storage to create a stable and resilient power supply.</p>
+                            <br>
+
+                            <h4>3D Modeling and Simulation</h4>
+                            <p>Before any physical construction begins, I build and test entire systems as detailed "digital twins." This allows me to simulate real-world conditions, validate designs, and optimize performance virtually.</p>
+                            <br>
+
+                            <h4>Machine Learning for Optimization</h4>
+                            <p>I apply machine learning models for predictive analytics. This means forecasting energy generation based on weather patterns, predicting demand, and automating energy flow to ensure power is distributed where it's needed most, right when it's needed.</p>
+                            <br>
+
+                            <h4>Data-Driven Performance Analysis</h4>
+                            <p>I use data to understand not just how a system is performing, but <i>why</i>. This allows for predictive maintenance, preventing failures before they happen and extending the life of critical components.</p>
+                            <!-- End of My Expertise Section -->
                     </div>
                     <div class="content-block">
                         <h3>What Drives Me</h3>
@@ -175,8 +196,8 @@
                                     <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                                 </svg>
                             </div>
-                            <h4>EV Systems Design</h4>
-                            <p>Complete vehicle conversion & powertrain optimization</p>
+                            <h4>Building the Future, Not Just Theorizing It</h4>
+                            <p>Actively engineering solutions that transform sustainable ideas into reality.</p>
                         </div>
                         <div class="expertise-item">
                             <div class="expertise-icon">
@@ -186,8 +207,8 @@
                                     <line x1="17.5" y1="15" x2="9" y2="15"></line>
                                 </svg>
                             </div>
-                            <h4>Simulation & Modeling</h4>
-                            <p>ANSYS CFD, MATLAB/Simulink for thermal & performance analysis</p>
+                            <h4>Holistic System Design & Optimization</h4>
+                            <p>Solving the puzzle of making solar, hydro, and storage work as one intelligent, unified grid.</p>
                         </div>
                         <div class="expertise-item">
                             <div class="expertise-icon">
@@ -195,12 +216,12 @@
                                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                                 </svg>
                             </div>
-                            <h4>Data-Driven Optimization</h4>
-                            <p>Python, Power BI for vehicle diagnostics & predictive maintenance</p>
+                            <h4>Digital Twin to Real-World Application</h4>
+                            <p>Turning advanced simulations into operational systems that deliver clean, tangible results.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="about-sidebar">
                     <div class="timeline-card glass-effect">
                         <h4>Current Role</h4>
@@ -242,59 +263,207 @@
                 <span class="section-tag">Credentials</span>
                 <h2 class="section-title-modern">Certifications & Training</h2>
             </div>
-            
-            <div class="cert-grid">
-                <div class="cert-card glass-effect">
-                    <div class="cert-badge">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
+
+            <div class="cert-carousel-container" id="carousel-container">
+                <div class="cert-grid" id="cert-grid">
+
+                    <!-- CARD 1 -->
+                    <div class="cert-card" data-image="Certifications\Solidworks_ Surfacing.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications\Solidworks_ Surfacing.png" alt="Solid Works Surfacing Professional" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Solid Works Surfacing Professional</h3>
+                            <p class="cert-year">2023</p>
+                        </div>
                     </div>
-                    <h3>Professional Engineer</h3>
-                    <p>Mechanical Engineering</p>
-                    <span class="cert-year">2023</span>
-                </div>
-                
-                <div class="cert-card glass-effect">
-                    <div class="cert-badge">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
+
+                    <!-- CARD 2 -->
+                     <div class="cert-card" data-image="Certifications\Solidworks Mechanical Design.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications\Solidworks Mechanical Design.png" alt="Solidworks Mechanical Design" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Solidworks Mechanical Design</h3>
+                            <p class="cert-year">2022</p>
+                        </div>
                     </div>
-                    <h3>EV System Design</h3>
-                    <p>Electric Vehicle Technology</p>
-                    <span class="cert-year">2022</span>
-                </div>
-                
-                <div class="cert-card glass-effect">
-                    <div class="cert-badge">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6"></polyline>
-                            <polyline points="8 6 2 12 8 18"></polyline>
-                        </svg>
+
+                    <!-- CARD 3 -->
+                   <div class="cert-card" data-image="Certifications/AutoDesk -Modelling and Desing for Manufacturing.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/AutoDesk -Modelling and Desing for Manufacturing.png" alt="AutoDesk -Modelling and Desing for Manufacturing" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>AutoDesk -Modelling and Desing for Manufacturing</h3>
+                            <p class="cert-year">2023</p>
+                        </div>
                     </div>
-                    <h3>Data Analytics</h3>
-                    <p>Python & Power BI</p>
-                    <span class="cert-year">2021</span>
-                </div>
-                
-                <div class="cert-card glass-effect">
-                    <div class="cert-badge">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                        </svg>
+
+                    <!-- CARD 4 -->
+                    <div class="cert-card" data-image="Certifications/Excel.jpg">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/Excel.jpg" alt="Excel Certificate" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Data Analytics with Excel</h3>
+                            <p class="cert-year">2023</p>
+                        </div>
                     </div>
-                    <h3>CAD/CAM</h3>
-                    <p>Fusion 360 & SolidWorks</p>
-                    <span class="cert-year">2020</span>
+
+                    <!-- CARD 5 -->
+                    <div class="cert-card" data-image="Certifications/Motors and Motor Control Circuit.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/Motors and Motor Control Circuit.png" alt="Motors and Motor Control Circuit" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Motors and Motor Control Circuit</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="cert-card" data-image="Certifications/Sensors and Sensors Circuit Diagram.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/Sensors and Sensors Circuit Diagram.png" alt="Sensors and Sensors Circuit Diagram" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Sensors and Sensors Circuit Diagram</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 7 -->
+                    <div class="cert-card" data-image="Certifications/Matlab _ Simulink Onramp.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/Matlab _ Simulink Onramp.png" alt="Matlab _ Simulink Onramp" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Matlab _ Simulink Onramp</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 8 -->
+                    <div class="cert-card" data-image="Certifications/Matlab_Battery Onramp.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/Matlab_Battery Onramp.png" alt="Matlab_Battery Onrampp" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Matlab_Battery Onramp</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 9 -->
+                    <div class="cert-card" data-image="Certifications/Supervised Machine Learning.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/Supervised Machine Learning.png" alt="Supervised Machine Learning" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>Supervised Machine Learning</h3>
+                            <p class="cert-year">2023</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 10 -->
+                    <div class="cert-card" data-image="Certifications\RE100_Introduction to Renewable Energy.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications\RE100_Introduction to Renewable Energy.png" alt="RE100_Introduction to Renewable Energy" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>RE100_Introduction to Renewable Energy</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 11 -->
+                    <div class="cert-card" data-image="Certifications/ADB Energy Economics, Environment, and Policy.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/ADB Energy Economics, Environment, and Policy.png" alt="ADBI Energy Economics, Environment, and Policy class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>ADBI Energy Economics, Environment, and Policy</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 12 -->
+                    <div class="cert-card" data-image="Certifications/ADBI - Renewable Energy.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/ADBI - Renewable Energy.png" alt="ADBI - Renewable Energy" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>ADBI - Renewable Energy</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 13 -->
+                    <div class="cert-card" data-image="Certifications\ADBI Policy Maker - Low Carbon Cooling.png">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications\ADBI Policy Maker - Low Carbon Cooling.png" alt="ADBI Policy Maker - Low Carbon Cooling" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>ADBI Policy Maker - Low Carbon Cooling</h3>
+                            <p class="cert-year">2025</p>
+                        </div>
+                    </div>
+                   
+                    <!-- CARD 14 -->
+                    <div class="cert-card" data-image="Certifications/COFAS.jpg">
+                        <!-- The image is now the first element -->
+                        <img src="Certifications/COFAS.jpg" alt="COFAS Olympiad Certificate" class="cert-card-image">
+
+                        <!-- Wrap the text in a 'cert-content' div -->
+                        <div class="cert-content">
+                            <h3>COFAS Olympiad</h3>
+                            <p class="cert-year">2015</p>
+                        </div>
+                    </div>
+            </div>
+             <!-- Pagination Controls -->
+                   <div class="pagination-wrap">
+                        <div class="pagination" id="pagination">
+                            <!-- The dots are generated by JavaScript here -->
+                        </div>
+                        <div class="pager-controls">
+                            <button id="prev-btn" class="pager-btn" aria-label="Previous page">←</button>
+                            <span id="page-info" class="page-info" aria-hidden="true">Page 1 of 1</span>
+                            <button id="next-btn" class="pager-btn" aria-label="Next page">→</button>
+                        </div>
+                    </div>
+        </div>
+
+         <!-- Image Modal -->
+        <div class="image-modal" id="image-modal" aria-hidden="true">
+            <div class="modal-inner">
+                <button class="close-modal" id="close-modal" aria-label="Close">&times;</button>
+                <img id="modal-image" src="" alt="Certificate preview">
+                <!-- ▼▼▼ Add this new wrapper div ▼▼▼ -->
+                <div class="modal-text-content">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-desc" class="modal-desc"></p>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Skills Section - Visual Redesign -->
+
+            <!-- Skills Section - Visual Redesign  -->
     <section class="skills-modern">
         <div class="container">
             <div class="section-header">
@@ -341,107 +510,122 @@
         </div>
     </section>
 
-    <!-- Contact Section - Enhanced -->
-    <section id="contact" class="contact-modern">
-        <div class="container">
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <div class="section-header">
-                        <span class="section-tag">Get In Touch</span>
-                        <h2 class="section-title-modern">Let's Work Together</h2>
-                        <p class="section-description">
-                            Have a project in mind or want to collaborate? I'm always open to discussing 
-                            new opportunities in sustainable mobility and data-driven engineering.
-                        </p>
-                    </div>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="mailto:kharelbiraz@gmail.com">kharelbiraz@gmail.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>LinkedIn</h4>
-                                <a href="https://www.linkedin.com/in/birajkharel" target="_blank">Connect with me</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="method-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Dhulikhel, Nepal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form-wrapper glass-effect">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-gradient">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- ======================================================= -->
+<!-- FINAL & CORRECTED HTML for the Contact Section        -->
+<!-- ======================================================= -->
 
-    <!-- Footer -->
-    <footer class="footer-modern">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Biraj Kharel</h3>
-                    <p>Building smarter, cleaner systems for a sustainable future.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="timeline.html">Timeline</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="blog.html">Blog</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
-            </div>
+<section id="contact" class="contact-modern">
+    <div class="container">
+        
+        <!-- The Section Header remains the same -->
+        <div class="section-header">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-title-modern">Let's Work Together</h2>
+            <p class="section-description">
+                Have a project in mind or want to collaborate? I'm always open to discussing 
+                new opportunities in sustainable mobility and data-driven engineering.
+            </p>
         </div>
-    </footer>
+        
+        <!-- The contact cards are now a direct child of the container -->
+        <div class="contact-methods">
+
+            <!-- The entire Email card is now an 'a' tag -->
+            <a href="mailto:kharelbiraz@gmail.com" class="contact-method contact-method-link">
+                <div class="method-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="method-text">
+                    <h4>Email</h4>
+                    <p class="link-simulation">kharelbiraz@gmail.com</p>
+                </div>
+            </a>
+
+            <!-- The entire LinkedIn card is an 'a' tag -->
+            <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="contact-method contact-method-link">
+                <div class="method-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </div>
+                <div class="method-text">
+                    <h4>LinkedIn</h4>
+                    <p class="link-simulation">Connect with me</p>
+                </div>
+            </a>
+
+            <!-- The Location card is a div -->
+            <div class="contact-method">
+                <div class="method-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="method-text">
+                    <h4>Location</h4>
+                    <p>Dhulikhel, Nepal</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- ===================================
+   ENHANCED FOOTER (Use in all HTML files)
+   ==================================== -->
+<footer class="footer-modern">
+    <div class="container">
+        
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top" aria-label="Back to top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+        </a>
+
+        <!-- Main Footer Content Grid -->
+        <div class="footer-content">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-brand">
+                <h3 class="footer-logo">Biraj Kharel</h3>
+                <p>Building smarter, cleaner systems for a sustainable future.</p>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="timeline.html">Timeline</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Social Media -->
+            <div class="footer-social">
+                <h4 class="footer-heading">Connect</h4>
+                <div class="social-icon-group">
+                    <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <!-- LinkedIn SVG Icon -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/birajkharel" target="_blank" class="social-icon" aria-label="GitHub">
+                        <!-- GitHub SVG Icon -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Bottom Bar with Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
 
     <script src="js/theme.js"></script>
     <script>
@@ -467,5 +651,7 @@
             alert('Thank you for your message! This is a demo form. In production, this would send an email.');
         });
     </script>
+<script src="script.js"></script>
+
 </body>
 </html>

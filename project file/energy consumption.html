@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modular Electric Vehicle | Biraj Kharel</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+    <style>
+        /* ADDING HELPER STYLES - You can move these to your CSS file */
+
+        /* --- JUSTIFICATION STYLES --- */
+        /* This rule targets the main text elements and justifies them */
+        .project-subtitle-large,
+        .project-main-content p,
+        .responsibilities-list li,
+        .outcomes-list li {
+            text-align: justify;
+            hyphens: auto; /* Improves spacing in justified text */
+        }
+        
+        /* --- OTHER STYLES (from previous version) --- */
+        .analysis-subsection {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+        .analysis-subsection h4 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+        }
+        .visual-placeholder {
+            border: 2px dashed var(--border-color);
+            background-color: var(--body-bg-color);
+            padding: 2rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+        .outcomes-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+        .outcomes-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 1rem;
+        }
+        .outcomes-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+        
+        <!-- Logo -->
+        <div class="nav-logo">
+            <a href="index.html">
+                <span class="logo-text">Biraj</span>
+                <span class="logo-accent">Kharel</span>
+            </a>
+        </div>
+        
+        <!-- Menu Links -->
+        <ul class="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../timeline.html">Timeline</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 L 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- ===================================
+       2. PROJECT HERO SECTION
+       ==================================== -->
+  <header class="project-hero">
+        <div class="project-hero-content">
+            <div class="project-tags">
+                <span class="tag">Published Research</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Electric Vehicles</span>
+            </div>
+            <h1 class="project-title-large">On-Road EV Energy Consumption Analysis</h1>
+            <p class="project-subtitle-large">
+                 A comprehensive research study analyzing the real-world energy consumption and range of a converted electric vehicle, culminating in a peer-reviewed publication.
+            </p>
+        </div>
+    </header>
+
+    <!-- ===================================
+       3. MAIN PROJECT CONTENT
+       ==================================== -->
+    <main class="project-detail-container">
+        <!-- Main Project Image (Optional for this page, as detailed images are below) -->
+        <div class="project-main-image" style="display:none;"></div>
+
+        <div class="project-layout">
+
+            <!-- Left Column: The Story -->
+            <div class="project-main-content">
+                
+                <div class="content-card">
+                    <section id="objective">
+                        <h2>Research Objective: De-mystifying "Range Anxiety"</h2>
+                        <p>A significant barrier to electric vehicle adoption is "range anxiety," fueled by the discrepancy between lab-tested range and real-world performance. This is especially true in regions with challenging terrain like Nepal. My research aimed to move beyond simplified models by conducting a rigorous on-road experiment to analyze the complex interplay of factors affecting EV energy consumption and develop a more accurate predictive framework.</p>
+                    </section>
+                </div>
+
+                <div class="content-card">
+                    <section id="role">
+                        <h2>My Role: Researcher & Data Analyst</h2>
+                        <p>As a primary author of this published paper, I managed the end-to-end research process. My responsibilities included:</p>
+                        <ul class="responsibilities-list">
+                            <li><strong>Experimental Design:</strong> Outfitting a custom-converted EV with GPS and Battery Management System (BMS) sensors to log high-fidelity, real-time performance data.</li>
+                            <li><strong>Data Acquisition & Processing:</strong> Conducting on-road tests over a route with significant elevation changes and using MATLAB, Python, and Excel to synchronize and analyze the resulting data streams.</li>
+                            <li><strong>Analytical Modeling:</strong> Applying physics-based principles to model the vehicle's energy dynamics, including aerodynamic drag, rolling resistance, and changes in kinetic and potential energy.</li>
+                            <li><strong>Interpretation & Visualization:</strong> Identifying key data correlations, such as the crucial link between altitude and battery state of charge, and creating the data visualizations essential to the paper's findings.</li>
+                        </ul>
+                    </section>
+                </div>
+                
+                <div class="content-card">
+                    <section id="analysis">
+                        <h2>Key Findings & Data-Driven Insights</h2>
+                        <p class="section-intro">The study yielded critical insights into EV performance, quantifying the real-world impact of variables that are often generalized in manufacturer estimates. The findings are summarized below.</p>
+                        
+                        <div class="analysis-feature-block">
+                            <div class="analysis-text-featured">
+                                <h4>1. The Critical Impact of Terrain on Battery Drain</h4>
+                                <p>The analysis revealed a powerful negative Pearson's correlation coefficient of <strong>-0.89 between altitude and State of Charge (SOC)</strong>. This data provides quantitative proof that climbing hills is a dominant factor in battery depletion, making it a critical variable for accurate range prediction in non-flat environments.</p>
+                            </div>
+                            <div class="analysis-visual-featured image-zoom-wrapper">
+                                <!-- UPDATE THIS IMAGE PATH -->
+                                <img src="../project images/Corelation .png" alt="Pearson's correlation matrix showing a strong negative correlation between altitude and SOC">
+                            </div>
+                        </div>
+
+                        <div class="analysis-feature-block">
+                            <div class="analysis-text-featured">
+                                <h4>2. The Power of Regenerative Braking</h4>
+                                <p>Our model quantified a game-changing insight: an efficient regenerative braking system stron. We calculated the energy loss over the route to be 20.86 kWh without regeneration, which dropped to just 10.22 kWh with it enabled. This proves that regeneration is essential, not just an add-on, for practical EV efficiency.</p>
+                            </div>
+                             <div class="analysis-visual-featured image-zoom-wrapper">
+                                <!-- UPDATE THIS IMAGE PATH -->
+                                <img src="../project images/Speed_Current.png" alt="Graph showing the relationship between vehicle speed and current drawn from the battery">
+                            </div>
+                        </div>
+
+                        <div class="analysis-feature-block">
+                            <div class="analysis-text-featured">
+                                <h4>3. Model Accuracy and Predictive Power</h4>
+                                <p>By using real-world GPS and BMS data in our physics-based model, our prediction for the final State of Charge at the destination was within <strong>6% of the actual measured value</strong>. This level of accuracy showcases the superiority of comprehensive, data-driven modeling over simplified manufacturer estimates for predicting real-world vehicle range.</p>
+                            </div>
+                            <div class="analysis-visual-featured image-zoom-wrapper">
+                                 <!-- UPDATE THIS IMAGE PATH -->
+                                 <img src="../project images/SOC from BMS and Measured.png" alt="Graph comparing the measured SOC from the vehicle's BMS against the SOC predicted by the MATLAB model">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+            <!-- Right Column: Quick Facts (Sticky Sidebar) -->
+            <aside class="project-sidebar">
+    
+                <!-- This new DIV is the key. It will be the sticky element. -->
+                <div class="sidebar-sticky-wrapper">
+
+                    <!-- Card 1: Detailed Project Snapshot -->
+                    <div class="sidebar-card">
+                        <h3>📊 Project Snapshot</h3>
+                        <ul class="snapshot-list">
+                            <li><span class="info-label">Type</span><span class="#">Published Paper</span></li>
+                            <li><span class="info-label">Journal</span><span class="#">IOP EES, Vol. 1385</span></li>
+                            <li><span class="info-label">Role</span><span class="#">Primary Author</span></li>
+                            <li><span class="info-label">Key Skills</span><span class="#">Data Analysis, MATLAB</span></li>
+                            <li><span class="info-label">Status</span><span class="#">Published 2024</span></li>
+                                                    </ul>
+                    </div>
+
+                    <!-- Card 2: Tools & Technologies -->
+                    <div class="sidebar-card">
+                        <h3>🛠️ Tools & Technologies</h3>
+                        <ul class="tool-list">
+                            <li><span class="tool-icon">📈</span>MATLAB & Python</li>
+                            <li><span class="tool-icon">📊</span>MS Excel</li>
+                            <li><span class="tool-icon">🚗</span>Custom EV Testbed</li>
+                            <li><span class="tool-icon">🛰️</span>GPS & BMS Sensors</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Card 3: Project Links -->
+                     <div class="sidebar-card">
+                         <h3>🔗 Publication Link</h3>
+                         <!-- UPDATE THIS LINK -->
+                         <a href="https://doi.org/10.1088/1755-1315/1385/1/012024" class="sidebar-button" target="_blank">View on IOP Science</a>
+                    </div>
+
+                </div> <!-- End of the new sticky wrapper DIV -->
+
+                <a href="../projects.html" class="back-link">&larr; Back to All Projects</a>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer etc. -->
+<footer class="footer-modern">
+    <div class="container">
+        
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top" aria-label="Back to top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+        </a>
+
+        <!-- Main Footer Content Grid -->
+        <div class="footer-content">
+            
+            <!-- Column 1: Brand -->
+            <div class="footer-brand">
+                <h3 class="footer-logo">Biraj Kharel</h3>
+                <p>Building smarter, cleaner systems for a sustainable future.</p>
+            </div>
+            
+            <!-- Column 2: Quick Links -->
+            <div class="footer-links">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../timeline.html">Timeline</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Social Media -->
+            <div class="footer-social">
+                <h4 class="footer-heading">Connect</h4>
+                <div class="social-icon-group">
+                    <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://github.com/birajkharel" target="_blank" class="social-icon" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Bottom Bar with Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Biraj Kharel. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+    <!-- Lightbox Modal Structure -->
+<div id="lightbox-overlay" class="lightbox-overlay">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="Enlarged simulation view">
+    </div>
+</div>
+
+        <script>
+        // LIGHTBOX FUNCTIONALITY SCRIPT
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageWrappers = document.querySelectorAll('.image-zoom-wrapper');
+            const lightboxOverlay = document.getElementById('lightbox-overlay');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            // Failsafe: if the lightbox elements don't exist on the page, do nothing.
+            if (!imageWrappers.length || !lightboxOverlay || !lightboxImage || !lightboxClose) {
+                return;
+            }
+
+            // Function to open the lightbox
+            const openLightbox = (e) => {
+                const imageElement = e.currentTarget.querySelector('img');
+                if (imageElement) {
+                    lightboxImage.src = imageElement.src;
+                    lightboxOverlay.style.display = 'flex'; // Use flex to center
+                }
+            };
+
+            // Function to close the lightbox
+            const closeLightbox = () => {
+                lightboxOverlay.style.display = 'none';
+            };
+
+            // Attach the click event to each zoomable image
+            imageWrappers.forEach(wrapper => {
+                wrapper.addEventListener('click', openLightbox);
+            });
+
+            // Attach click events to close the lightbox
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxOverlay.addEventListener('click', (e) => {
+                if (e.target === lightboxOverlay) { // Only close if the dark background is clicked
+                    closeLightbox();
+                }
+            });
+
+            // Also allow closing with the "Escape" key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
