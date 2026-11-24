@@ -3,337 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Biraj Kharel</title>
-    <meta name="description" content="Photo gallery showcasing projects, simulations, and engineering work">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/gallery.css">
+    <title>Renders | Biraj Kharel</title>
+    <meta name="description" content="CAD renders, simulation images, build photos, and photography by Biraj Kharel.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/fusion.css?v=202611232304">
+    <style>
+        .rgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; }
+        .tile { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; text-align: left; padding: 0; transition: border-color .15s, box-shadow .15s, transform .15s; }
+        .tile:hover { border-color: var(--select); box-shadow: 0 0 0 2px var(--select-soft), var(--shadow); transform: translateY(-2px); }
+        .tile .img { aspect-ratio: 4 / 3; background: #eef1f4; overflow: hidden; }
+        .tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+        .tile:hover img { transform: scale(1.05); }
+        .tile .cap { padding: 8px 12px; display: grid; }
+        .tile b { font-size: 14px; }
+        .tile small { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+        .viewer { position: fixed; inset: 0; z-index: 100; background: #1c1d20; display: none; grid-template-rows: 44px 1fr auto; color: #e6e6e6; }
+        .viewer.open { display: grid; }
+        .v-top { display: flex; align-items: center; gap: 12px; padding: 0 14px; background: #2b2d30; font-size: 13px; }
+        .v-top .ti { color: var(--orange); }
+        .v-top .count { font-family: var(--mono); font-size: 12px; color: #9aa0a6; }
+        .v-top button { margin-left: auto; color: #e6e6e6; font-size: 22px; }
+        .v-stage { position: relative; display: grid; place-items: center; padding: 16px 64px; min-height: 0; background: radial-gradient(circle at 50% 40%, #3a3d42, #1c1d20 70%); }
+        .v-stage img { max-width: 100%; max-height: calc(100vh - 190px); object-fit: contain; border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,.5); background: #fff; }
+        .v-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.1); color: #fff; font-size: 22px; display: grid; place-items: center; }
+        .v-nav:hover { background: var(--select); }
+        .v-prev { left: 12px; } .v-next { right: 12px; }
+        .v-info { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 12px 18px; background: #2b2d30; }
+        .v-info b { font-size: 15px; } .v-info p { font-size: 13px; color: #b9bec4; }
+        @media (max-width: 600px) { .v-stage { padding: 10px; } .v-nav { width: 36px; height: 36px; } }
+    </style>
 </head>
-<body>
+<body data-page="gallery" data-root="">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="index.html">Biraj_Kharel v26</a> &rsaquo; Render &rsaquo; Render gallery</div>
+    <h1 class="page-title">Renders</h1>
+    <p class="page-sub">CAD renders, simulation results, build photos, and some photography. Click any image to open it full size, then use the arrows or your keyboard to browse.</p>
 
-     <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
+    <div class="data-toolbar">
+      <div class="flts" id="flts">
+        <button class="flt active" data-f="all">All</button>
+        <button class="flt" data-f="renders">CAD renders</button>
+        <button class="flt" data-f="simulations">Simulations</button>
+        <button class="flt" data-f="projects">Build photos</button>
+        <button class="flt" data-f="photography">Photography</button>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar glass-effect">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html">
-                    <span class="logo-text">Biraj</span>
-                    <span class="logo-accent">Kharel</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" >Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-           
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div class="rgrid" id="rgrid"></div>
+    <div class="status-foot"><span id="cnt">Render queue · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
 
-    <!-- Gallery Header -->
-    <section class="gallery-header">
-        <div class="container">
-            <p class="section-label">Visual Portfolio</p>
-            <h1 class="section-title">Gallery</h1>
-            <p class="gallery-intro">Project photos, CAD renders, simulations, and behind-the-scenes moments</p>
-        </div>
-    </section>
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <div class="v-top"><i class="ti ti-photo"></i><span id="v-title"></span><span class="count" id="v-count"></span><button id="v-close" aria-label="Close viewer"><i class="ti ti-x" style="color:#e6e6e6"></i></button></div>
+  <div class="v-stage"><button class="v-nav v-prev" id="v-prev" aria-label="Previous image"><i class="ti ti-chevron-left"></i></button><img id="v-img" alt=""><button class="v-nav v-next" id="v-next" aria-label="Next image"><i class="ti ti-chevron-right"></i></button></div>
+  <div class="v-info"><div><b id="v-cap"></b><p id="v-desc"></p></div><a class="btn primary" id="v-link" href="#"><i class="ti ti-box"></i> <span>Open project</span></a></div>
+</div>
 
-    <!-- Filter Buttons -->
-    <section class="gallery-filters">
-        <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="projects">Projects</button>
-                <button class="filter-btn" data-filter="renders">CAD Renders</button>
-                <button class="filter-btn" data-filter="photography">Photography</button>
-            </div>
-        </div>
-    </section>
+<script>
+(function () {
+  const items = [
+    ['renders', 'Gallery/1967 shelby.png', '1967 Shelby', 'Surface model of the upper body of a 1967 Shelby.', ''],
+    ['renders', 'Gallery/Gear_box_design.png', 'Gearbox design', 'Gear-train CAD model.', ''],
+    ['renders', 'Gallery/Robotic arm.png', 'Robotic arm', 'CAD model of a robotic arm.', 'project file/robotic-arm.html'],
+    ['renders', 'Gallery/Rendered Robot 1.4.jpg', 'Robot render', 'Rendered robot model.', ''],
+    ['renders', 'Gallery/fork lift.png', 'Forklift', 'CAD model of a forklift.', ''],
+    ['renders', 'Gallery/Flag_Pole Mount.png', 'Flag pole mount', 'Mechanical mount design.', ''],
+    ['renders', 'Gallery/HeadPhoone.png', 'Headphones', 'Consumer-product surface model.', ''],
+    ['renders', 'Gallery/Mintendo Model.png', 'Handheld console', '3D model of a handheld game console.', ''],
+    ['renders', 'Gallery/Wall_E.PNG', 'Wall-E', 'Character model built for practice.', ''],
+    ['renders', 'Gallery/Sword_Stone_Bg.png', 'Sword in the stone', 'Blender render.', ''],
+    ['renders', 'project images/modular electric vehicle.png', 'Modular EV concept', 'Concept render of the modular electric vehicle.', 'project file/modular_vehicle.html'],
+    ['renders', 'project images/isometric car.png', 'Maruti 800 EV model', 'Isometric model of the converted car.', 'project file/ic to electric.html'],
+    ['simulations', 'project images/modular/fig03.png', 'Crash: directional deformation', 'Explicit dynamics, 50 mph frontal impact · max 46.4 mm.', 'project file/modular_vehicle.html'],
+    ['simulations', 'project images/modular/fig15.png', 'Static: total deformation', '2000 kg distributed load · max 0.55 mm.', 'project file/modular_vehicle.html'],
+    ['simulations', 'project images/modular/fig13.png', 'Modal: 184.19 Hz', 'Mode shape of the modular EV chassis.', 'project file/modular_vehicle.html'],
+    ['simulations', 'project images/Equivalent stress bus.png', 'Bus chassis stress', 'Von Mises stress at 25% overload.', 'project file/Public Bus Conversion.html'],
+    ['simulations', 'project images/battery thermal modelling.png', 'Battery cooling CFD', 'Temperature field in a liquid-cooled module.', 'project file/battery cooling.html'],
+    ['simulations', 'project images/Corelation .png', 'EV energy correlations', 'Correlation matrix from on-road testing.', 'project file/energy consumption.html'],
+    ['projects', 'Gallery/shell eco front.jpg', 'Shell Eco-marathon: front', 'Team Junkiri vehicle, Lombok 2022.', 'project file/shell-eco-marathon.html'],
+    ['projects', 'Gallery/shell eco side.jpg', 'Shell Eco-marathon: side', 'Full vehicle view.', 'project file/shell-eco-marathon.html'],
+    ['projects', 'project images/Front.jpg', 'Eicher bus', 'The bus selected for EV conversion.', 'project file/Public Bus Conversion.html'],
+    ['projects', 'project images/Engine Removal from Bus.png', 'Engine removal', 'Lifting the diesel engine out of the bus.', 'project file/Public Bus Conversion.html'],
+    ['projects', 'project images/maruti disassembled.jpg', 'Maruti 800 teardown', 'Engine bay after the IC engine came out.', 'project file/ic to electric.html'],
+    ['projects', 'project images/Maruticar Wiring.png', 'HV wiring', 'Controller and high-voltage wiring in the converted car.', 'project file/ic to electric.html'],
+    ['photography', 'Gallery/Boat.jpg', 'Begnas Lake', 'Boats on Begnas Lake, Nepal.', ''],
+    ['photography', 'Gallery/Ku ground.jpg', 'Kathmandu University', 'The ground and multi-purpose hall.', ''],
+    ['photography', 'Gallery/mahakali pul.jpg', 'Mahakali Bridge', 'The bridge connecting Nepal and India.', ''],
+    ['photography', 'Gallery/plane.png', 'Above the clouds', 'From the plane window.', ''],
+    ['photography', 'Gallery/houses.jpg', 'Hillside houses', 'A snap of time.', '']
+  ];
+  const grid = document.getElementById('rgrid'), viewer = document.getElementById('viewer');
+  let filter = 'all', list = [], cur = 0;
+  const label = { renders: 'CAD render', simulations: 'Simulation', projects: 'Build photo', photography: 'Photography' };
 
-    <!-- Gallery Grid -->
-    <section class="gallery-section">
-        <div class="container">
-            <div class="gallery-grid">
-                
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/1967 shelby.png" alt="CAD Render of a 1967 Shelby">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>1967 Shelby</h3>
-                        <p>Modeled the upper part of shelby</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item" data-category="photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/Boat.jpg" alt="Boats around begnas tal">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Begnas Taal</h3>
-                        <p>Roaming around the lake</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item" data-category="projects renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Flag_Pole Mount.png" alt="3D model of a flag pole mount" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Flag Pole Mount</h3>
-                        <p>3D model</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item" data-category="photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/Ku ground.jpg" alt="Kathmandu University ground and multi-purpose hall" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>KU Ground and Multi-Purpose Hall</h3>
-                        <p>A snap of Time</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item" data-category="photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/mahakali pul.jpg" alt="Mahakali bridge between India and Nepal" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Mahakali Bridge</h3>
-                        <p>Bridge Connecting India and Nepal</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item" data-category="photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/plane.png" alt="View above the clouds from an airplane" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Timeless Sky</h3>
-                        <p>Up above the clouds</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 7 -->
-                <div class="gallery-item" data-category="projects photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/shell eco front.jpg" alt="Team Junkiri Shell Eco-marathon vehicle, front view" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Shell Eco Marathon</h3>
-                        <p>Team Junkiri Shell Eco Marathon, Indonesia</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 8 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Sword_Stone_Bg.png" alt="Blender render of a sword in a stone" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Sword on Stone</h3>
-                        <p>Blender Render</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 9 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Wall_E.PNG" alt="3D model of Wall-E" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Wall E</h3>
-                        <p>3D Model of Wall-E </p>
-                    </div>
-                </div>
-
-                   <!-- Gallery Item 10 -->
-                <div class="gallery-item" data-category="projects photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/shell eco side.jpg" alt="Team Junkiri Shell Eco-marathon vehicle, side view" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Shell Eco Marathon Full Vehicle View</h3>
-                        <p>Team Junkiri Shell Eco Marathon, Indonesia</p>
-                    </div>
-                </div>
-                <!-- Gallery Item 11 -->
-                <div class="gallery-item" data-category="projects renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Gear_box_design.png" alt="Gearbox design CAD model" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Gearbox Design</h3>
-                        <p>Gear train CAD model</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 12 -->
-                <div class="gallery-item" data-category="projects renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Robotic arm.png" alt="CAD model of a robotic arm" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Robotic Arm</h3>
-                        <p>3D model</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 13 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Rendered Robot 1.4.jpg" alt="Rendered robot model" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Robot Render</h3>
-                        <p>3D render</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 14 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/fork lift.png" alt="CAD model of a forklift" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Forklift</h3>
-                        <p>3D model</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 15 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/HeadPhoone.png" alt="3D model of headphones" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Headphones</h3>
-                        <p>3D model</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 16 -->
-                <div class="gallery-item" data-category="renders">
-                    <div class="gallery-image">
-                        <img src="Gallery/Mintendo Model.png" alt="3D model of a handheld game console" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Handheld Console</h3>
-                        <p>3D model</p>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 17 -->
-                <div class="gallery-item" data-category="photography">
-                    <div class="gallery-image">
-                        <img src="Gallery/houses.jpg" alt="Houses on a hillside" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Houses</h3>
-                        <p>A snap of time</p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close">&times;</button>
-        <button class="lightbox-prev">‹</button>
-        <button class="lightbox-next">›</button>
-        <div class="lightbox-content">
-            <div class="lightbox-image"></div>
-            <div class="lightbox-caption">
-                <h3></h3>
-                <p></p>
-            </div>
-        </div>
-    </div>
-
-  <!-- ===================================
-   ENHANCED FOOTER (Use in all HTML files)
-   ==================================== -->
-<footer class="footer-modern">
-    <div class="container">
-        
-        <!-- Back to Top Button -->
-        <a href="#" class="back-to-top" aria-label="Back to top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 19V5M5 12l7-7 7 7"/>
-            </svg>
-        </a>
-
-        <!-- Main Footer Content Grid -->
-        <div class="footer-content">
-            
-            <!-- Column 1: Brand -->
-            <div class="footer-brand">
-                <h3 class="footer-logo">Biraj Kharel</h3>
-                <p>Building smarter, cleaner systems for a sustainable future.</p>
-            </div>
-            
-            <!-- Column 2: Quick Links -->
-            <div class="footer-links">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 3: Social Media -->
-            <div class="footer-social">
-                <h4 class="footer-heading">Connect</h4>
-                <div class="social-icon-group">
-                    <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
-                        <!-- LinkedIn SVG Icon -->
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://github.com/Birazk" target="_blank" class="social-icon" aria-label="GitHub">
-                        <!-- GitHub SVG Icon -->
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Bottom Bar with Copyright -->
-        <div class="footer-bottom">
-            <p>&copy; 2026 Biraj Kharel. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
-
-
-    <script src="js/theme.js"></script>
-    <script src="js/gallery.js"></script>
+  function render() {
+    list = items.filter(x => filter === 'all' || x[0] === filter);
+    grid.innerHTML = list.map((x, i) => '<button class="tile" data-i="' + i + '"><div class="img"><img src="' + encodeURI(x[1]) + '" alt="' + x[2] + '" loading="lazy"></div><div class="cap"><b>' + x[2] + '</b><small>' + label[x[0]] + '</small></div></button>').join('');
+    grid.querySelectorAll('.tile').forEach(t => t.addEventListener('click', () => open(+t.dataset.i)));
+    document.querySelectorAll('.flt').forEach(b => b.classList.toggle('active', b.dataset.f === filter));
+    document.getElementById('cnt').textContent = 'Render queue · ' + list.length + ' images · 0 errors';
+  }
+  function open(i) {
+    cur = (i + list.length) % list.length; const x = list[cur];
+    const img = document.getElementById('v-img');
+    img.src = encodeURI(x[1]); img.alt = x[2];
+    document.getElementById('v-title').textContent = label[x[0]];
+    document.getElementById('v-count').textContent = (cur + 1) + ' / ' + list.length;
+    document.getElementById('v-cap').textContent = x[2];
+    document.getElementById('v-desc').textContent = x[3];
+    const l = document.getElementById('v-link');
+    if (x[4]) { l.href = x[4]; l.removeAttribute('target'); l.querySelector('span').textContent = 'Open project'; }
+    else { l.href = encodeURI(x[1]); l.target = '_blank'; l.querySelector('span').textContent = 'Open full image'; }
+    viewer.classList.add('open');
+  }
+  const close = () => viewer.classList.remove('open');
+  document.getElementById('v-close').onclick = close;
+  document.getElementById('v-prev').onclick = () => open(cur - 1);
+  document.getElementById('v-next').onclick = () => open(cur + 1);
+  viewer.addEventListener('click', e => { if (e.target.classList.contains('v-stage')) close(); });
+  document.addEventListener('keydown', e => { if (!viewer.classList.contains('open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') open(cur - 1); if (e.key === 'ArrowRight') open(cur + 1); });
+  document.querySelectorAll('.flt').forEach(b => b.addEventListener('click', () => { filter = b.dataset.f; history.replaceState(null, '', filter === 'all' ? location.pathname : '#' + filter); render(); }));
+  const h = location.hash.slice(1); if (label[h]) filter = h;
+  render();
+})();
+</script>
+<script src="js/site-data.js?v=202611232304"></script>
+<script src="js/fusion.js?v=202611232304"></script>
 </body>
 </html>

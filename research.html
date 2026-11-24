@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research: Tire Rubber Aging, Fatigue & PINNs | Biraj Kharel</title>
+    <meta name="description" content="Biraj Kharel's research at The University of Akron: linking environmental aging of tire rubber to mechanical response, fatigue, and wear with experiments, Abaqus and Endurica simulation, and physics-informed neural networks.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/fusion.css?v=202611232304">
+    <style>
+        .legend { display: flex; align-items: stretch; gap: 10px; margin-top: 16px; font-family: var(--mono); font-size: 11px; color: var(--text-2); }
+        .legend .bar { flex: 1; max-width: 420px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, #1d4ed8, #06b6d4, #22c55e, #eab308, #f97316, #dc2626); align-self: center; }
+        .why { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .why .dialog-body h3 { font-size: 15px; margin-bottom: 6px; }
+        .why .dialog-body p { font-size: 14px; color: var(--text-2); }
+        .why .big { font-size: 28px; color: var(--orange); }
+        .study { display: grid; grid-template-columns: 250px 1fr; gap: 0; }
+        .study-tree { border-right: 1px solid var(--line); background: var(--panel); padding: 6px 0; }
+        .step { display: flex; align-items: center; gap: 10px; width: 100%; height: 40px; padding: 0 14px; font-size: 13px; text-align: left; color: var(--text); border-left: 3px solid transparent; }
+        .step:hover { background: #eef5fa; }
+        .step.on { background: var(--select-soft); color: var(--select); font-weight: 600; border-left-color: var(--select); }
+        .step .num { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-family: var(--mono); font-size: 11px; background: #fff; border: 1px solid var(--line); color: var(--text-2); flex: none; }
+        .step.on .num { background: var(--select); border-color: var(--select); color: #fff; }
+        .step .ok { margin-left: auto; color: #2fb35a; }
+        .step-panel { padding: 20px 24px; min-height: 300px; }
+        .step-panel h3 { font-size: 20px; display: flex; align-items: center; gap: 10px; }
+        .step-panel h3 .ti { color: var(--orange); font-size: 26px; }
+        .step-panel .kicker { font-family: var(--mono); font-size: 12px; color: var(--text-3); margin-bottom: 4px; }
+        .step-panel ul { margin-top: 12px; }
+        .step-panel .nav { display: flex; justify-content: space-between; margin-top: 20px; }
+        .methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+        .sub { display: grid; gap: 8px; }
+        .sub div { display: grid; grid-template-columns: 92px 1fr; gap: 10px; font-size: 13px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
+        .sub div:last-child { border-bottom: 0; }
+        .sub code { font-family: var(--mono); font-size: 12px; color: #b4541a; background: var(--orange-soft); padding: 1px 6px; border-radius: 3px; height: fit-content; }
+        .layers { display: grid; gap: 3px; margin-top: 10px; }
+        .layers span { font-family: var(--mono); font-size: 11px; padding: 4px 10px; color: #fff; border-radius: 2px; }
+        .note { font-size: 13px; color: var(--text-2); background: #fff; border: 1px dashed var(--line); padding: 10px 14px; border-radius: 4px; }
+        @media (max-width: 760px) { .study { grid-template-columns: 1fr; } .study-tree { border-right: 0; border-bottom: 1px solid var(--line); } }
+    </style>
+</head>
+<body data-page="research" data-root="">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="index.html">Biraj_Kharel v26</a> &rsaquo; Simulation &rsaquo; Study 1 · Tire_Aging</div>
+    <h1 class="page-title">Tire rubber aging, fatigue &amp; physics-informed modeling</h1>
+    <p class="page-sub">My research at The University of Akron links how tire rubber ages in service (ozone, heat, and humidity) to how it stiffens, dissipates energy, cracks, and wears. The goal is a predictive framework that ties real aging conditions to how the compound behaves and fails.</p>
+    <div class="legend"><span>unaged</span><span class="bar"></span><span>aged</span></div>
+
+    <section class="section">
+      <div class="section-head"><i class="ti ti-alert-triangle"></i><h2>Why tire aging matters</h2><span class="rule"></span></div>
+      <div class="why">
+        <div class="dialog"><div class="dialog-body"><div class="big"><i class="ti ti-chart-line"></i></div><h3>Stiffness and hysteresis shift</h3><p>Oxidative aging changes the rubber's stress–strain response and energy dissipation over time.</p></div></div>
+        <div class="dialog"><div class="dialog-body"><div class="big"><i class="ti ti-alert-octagon"></i></div><h3>Shorter fatigue life</h3><p>Aged compound cracks and fails sooner under the same cyclic loading than fresh material.</p></div></div>
+        <div class="dialog"><div class="dialog-body"><div class="big"><i class="ti ti-link-off"></i></div><h3>A missing link in models</h3><p>Most durability models still assume unaged properties; few connect environmental exposure to constitutive behavior and failure.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="pipeline">
+      <div class="section-head"><i class="ti ti-route"></i><h2>Study workflow · click a step</h2><span class="rule"></span></div>
+      <div class="dialog study">
+        <div class="study-tree" role="tablist" aria-label="Research steps">
+          <button class="step on" data-s="0" role="tab"><span class="num">1</span>Environmental aging<i class="ti ti-check ok"></i></button>
+          <button class="step" data-s="1" role="tab"><span class="num">2</span>Mechanical testing<i class="ti ti-check ok"></i></button>
+          <button class="step" data-s="2" role="tab"><span class="num">3</span>Wear analysis<i class="ti ti-check ok"></i></button>
+          <button class="step" data-s="3" role="tab"><span class="num">4</span>Data generation<i class="ti ti-check ok"></i></button>
+          <button class="step" data-s="4" role="tab"><span class="num">5</span>Abaqus + Endurica<i class="ti ti-check ok"></i></button>
+          <button class="step" data-s="5" role="tab"><span class="num">6</span>PINN modeling<i class="ti ti-check ok"></i></button>
+        </div>
+        <div class="step-panel" id="panel" role="tabpanel" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="methods">
+      <div class="section-head"><i class="ti ti-settings-cog"></i><h2>Methods &amp; tools</h2><span class="rule"></span></div>
+      <div class="methods">
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-wave-sine"></i> Dynamic characterization</div><div class="dialog-body prose">
+          <p>Direct dynamic characterization of tire elastomers from <b>20 to 1500 Hz</b>, controlling temperature, prestrain, strain amplitude, and loading history.</p>
+          <p>Planned next: comparison with time–temperature superposition and viscoelastic inputs for FEM.</p></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-code"></i> Abaqus subroutines</div><div class="dialog-body sub">
+          <div><code>HETVAL</code><span>Diffusion-limited oxidation (DLO): oxygen diffusion–reaction modeled through the heat-transfer analogy.</span></div>
+          <div><code>USDFLD</code><span>Field variables that carry aging state into the material model.</span></div>
+          <div><code>UMAT / UHYPER</code><span>Aging-dependent constitutive response.</span></div>
+          <div><code>UVARM</code><span>Custom output variables for post-processing.</span></div></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-stack-2"></i> Tire cross-section model</div><div class="dialog-body prose">
+          <p>Oxygen ingress is studied through a seven-layer strip of the tire cross-section:</p>
+          <div class="layers">
+            <span style="background:#1d4ed8">Liner</span><span style="background:#0e7490">Ply</span><span style="background:#15803d">Wedge</span><span style="background:#a16207">Belt 1</span><span style="background:#c2410c">Belt 2</span><span style="background:#b91c1c">Base</span><span style="background:#7f1d1d">Tread</span>
+          </div></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-brain"></i> Physics-informed neural networks</div><div class="dialog-body prose">
+          <p>PINNs that discover hyperelastic constitutive models from sparse experimental data by embedding mechanical constraints directly in the loss function, then learn how the constitutive law evolves with aging from combined test and simulation data.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><i class="ti ti-player-track-next"></i><h2>Next steps</h2><span class="rule"></span></div>
+      <div class="dialog"><div class="dialog-body"><ul class="checks">
+        <li>Export oxygen profiles over time and integrate the reaction rate into accumulated oxygen exposure.</li>
+        <li>Calibrate property evolution with aging-dependent tests at 7-day, 2-week, and 4-week intervals.</li>
+        <li>Map aged properties into Abaqus mechanics and predict fatigue life with Endurica under pressure-cycle loading.</li>
+        <li>Train PINNs on combined experimental and simulation data to predict tire-rubber performance.</li>
+      </ul></div></div>
+      <p class="note" style="margin-top:14px;"><i class="ti ti-lock"></i> Detailed results and images are shared with the research sponsor and aren't published here. <a href="mailto:bk233@uakron.edu?subject=Tire%20aging%20research">Email me</a> to talk about the work.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><i class="ti ti-components"></i><h2>Related simulation work</h2><span class="rule"></span></div>
+      <div class="comp-grid">
+        <a class="comp" href="project file/modular_vehicle.html"><div class="thumb"><img src="project images/modular/fig03.png" alt="Crash simulation of the modular EV chassis" loading="lazy"><span class="ver">FEA</span></div><div class="body"><div class="fname"><i class="ti ti-box"></i> Modular_EV_Chassis</div><h3>Static, crash, and modal FEA</h3><p>ANSYS validation of a space-frame EV chassis.</p></div></a>
+        <a class="comp" href="project file/battery cooling.html"><div class="thumb"><img src="project images/battery thermal modelling.png" alt="Battery cooling CFD" loading="lazy"><span class="ver">CFD</span></div><div class="body"><div class="fname"><i class="ti ti-box"></i> Battery_Liquid_Cooling</div><h3>Battery cooling CFD</h3><p>Five channel designs in ANSYS Fluent.</p></div></a>
+        <a class="comp" href="project file/battery-soh.html"><div class="thumb"><img src="project images/SOC from BMS and Measured.png" alt="Battery data" loading="lazy"><span class="ver">ML</span></div><div class="body"><div class="fname"><i class="ti ti-box"></i> Battery_SOH_Prognostics</div><h3>Battery health ML</h3><p>Degradation forecasting from fleet data.</p></div></a>
+      </div>
+    </section>
+
+    <div class="status-foot"><span>Study 1 · Tire_Aging · solving · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script>
+(function () {
+  const steps = [
+    { i: 'ti-sun-high', k: 'Step 1 of 6 · Load case', t: 'Environmental aging', p: 'Rubber specimens are aged under the conditions tires face in service.', l: ['Ozone exposure', 'Thermal (heat) aging', 'Humidity exposure', 'Specimens collected at defined time steps'] },
+    { i: 'ti-arrows-diff', k: 'Step 2 of 6 · Testing', t: 'Mechanical testing', p: 'Aged and unaged specimens are tested side by side under mechanical loading.', l: ['Stiffness', 'Hysteresis (energy dissipation)', 'Fatigue response', 'Dynamic characterization from 20 to 1500 Hz'] },
+    { i: 'ti-eraser', k: 'Step 3 of 6 · Testing', t: 'Wear analysis', p: 'Wear behavior is measured to see how aging changes abrasion.', l: ['Friction', 'Abrasion', 'Mass loss'] },
+    { i: 'ti-database', k: 'Step 4 of 6 · Data', t: 'Data generation', p: 'Measurements become aging-dependent material and wear datasets.', l: ['Properties at defined aging time steps', 'Inputs for simulation calibration', 'Training data for the neural network'] },
+    { i: 'ti-chart-dots-3', k: 'Step 5 of 6 · Solve', t: 'Abaqus + Endurica', p: 'Simulation connects oxygen ingress, mechanics, and fatigue life.', l: ['Diffusion-limited oxidation (DLO) via a HETVAL subroutine', 'USDFLD, UMAT/UHYPER, and UVARM for aging-dependent response', 'Mechanics in Abaqus; fatigue life in Endurica CL/DT'] },
+    { i: 'ti-brain', k: 'Step 6 of 6 · Results', t: 'PINN modeling', p: 'A physics-informed neural network learns how the constitutive law evolves with aging.', l: ['Trained on experimental and simulation data', 'Mechanical constraints embedded in the loss function', 'Predicts tire-rubber performance and remaining life'] }
+  ];
+  const panel = document.getElementById('panel'), btns = document.querySelectorAll('.step');
+  function show(n) {
+    const s = steps[n];
+    btns.forEach((b, j) => { b.classList.toggle('on', j === n); b.setAttribute('aria-selected', j === n); });
+    panel.innerHTML = '<div class="kicker">' + s.k + '</div><h3><i class="ti ' + s.i + '"></i>' + s.t + '</h3><p style="margin-top:8px;color:#33383d">' + s.p + '</p><ul class="checks">' + s.l.map(x => '<li>' + x + '</li>').join('') + '</ul>' +
+      '<div class="nav"><button class="btn" ' + (n === 0 ? 'style="visibility:hidden"' : '') + ' data-go="' + (n - 1) + '"><i class="ti ti-arrow-left"></i> Previous</button>' +
+      (n < steps.length - 1 ? '<button class="btn primary" data-go="' + (n + 1) + '">Next step <i class="ti ti-arrow-right"></i></button>' : '<a class="btn primary" href="#methods">See methods <i class="ti ti-arrow-down"></i></a>') + '</div>';
+    panel.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => show(+b.dataset.go)));
+  }
+  btns.forEach(b => b.addEventListener('click', () => show(+b.dataset.s)));
+  show(0);
+})();
+</script>
+<script src="js/site-data.js?v=202611232304"></script>
+<script src="js/fusion.js?v=202611232304"></script>
+</body>
+</html>

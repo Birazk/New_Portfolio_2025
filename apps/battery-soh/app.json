@@ -1,0 +1,29 @@
+{
+ "version": "20261123223138",
+ "entrypoint": "app.py",
+ "requirements": [
+  "plotly",
+  "scikit-learn",
+  "xgboost",
+  "sqlalchemy",
+  "seaborn",
+  "matplotlib",
+  "statsmodels"
+ ],
+ "files": {
+  "app.py": "src/app.py",
+  "pages/1_Data_Ingestion.py": "src/pages/1_Data_Ingestion.py",
+  "pages/2_Model_Training.py": "src/pages/2_Model_Training.py",
+  "pages/3_Real_Time_Prediction.py": "src/pages/3_Real_Time_Prediction.py",
+  "pages/4_Fleet_Dashboard.py": "src/pages/4_Fleet_Dashboard.py",
+  "pages/5_Model_Comparison.py": "src/pages/5_Model_Comparison.py",
+  "src/__init__.py": "src/src/__init__.py",
+  "src/database.py": "src/src/database.py",
+  "src/data_generator.py": "src/src/data_generator.py",
+  "src/data_processor.py": "src/src/data_processor.py",
+  "src/feature_engineering.py": "src/src/feature_engineering.py",
+  "src/ml_models.py": "src/src/ml_models.py",
+  "utils/__init__.py": "src/utils/__init__.py",
+  "utils/visualization.py": "src/utils/visualization.py"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "version": "20261123223138",
+ "entrypoint": "app.py",
+ "requirements": [
+  "plotly",
+  "scipy",
+  "sympy",
+  "pandas"
+ ],
+ "files": {
+  "app.py": "src/app.py",
+  "kinematics.py": "src/kinematics.py",
+  "dynamics.py": "src/dynamics.py",
+  "control.py": "src/control.py",
+  "trajectory.py": "src/trajectory.py",
+  "visualization.py": "src/visualization.py",
+  "utils.py": "src/utils.py"
+ }
+}

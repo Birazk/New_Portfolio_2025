@@ -3,178 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Biraj Kharel</title>
-    <meta name="description" content="Insights on electric vehicles, sustainable engineering, and data analytics">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/blog.css">
+    <title>Notes | Biraj Kharel</title>
+    <meta name="description" content="Short engineering notes by Biraj Kharel on EV energy use, battery cooling, battery health, and tire rubber aging.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/fusion.css?v=202611232304">
+    <style>
+        .notes { display: grid; gap: 14px; margin-top: 22px; }
+        .note-card { background: #fff; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; scroll-margin-top: 12px; }
+        .note-card > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 14px 16px; }
+        .note-card > summary::-webkit-details-marker { display: none; }
+        .note-card > summary:hover { background: #f7fbfe; }
+        .note-card[open] { border-color: var(--select); box-shadow: 0 0 0 2px var(--select-soft); }
+        .note-card .ico { width: 44px; height: 44px; border-radius: 6px; display: grid; place-items: center; font-size: 22px; background: #fdecec; color: var(--sketch); }
+        .note-card h3 { font-size: 16px; line-height: 1.35; }
+        .note-card .meta { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+        .note-card .chev { color: var(--text-3); transition: transform .2s; }
+        .note-card[open] .chev { transform: rotate(180deg); }
+        .note-body { padding: 0 18px 18px 74px; }
+        .note-body .go { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .changelog { display: grid; gap: 0; background: #fff; border: 1px solid var(--line); border-radius: 6px; }
+        .changelog div { display: grid; grid-template-columns: 90px 70px 1fr; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--line-soft); font-size: 13px; }
+        .changelog div:last-child { border-bottom: 0; }
+        .changelog code { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+        .changelog .v { font-family: var(--mono); font-size: 11px; background: #2b2d30; color: #fff; border-radius: 3px; text-align: center; height: fit-content; padding: 1px 0; }
+        @media (max-width: 600px) { .note-body { padding-left: 18px; } .changelog div { grid-template-columns: 1fr; gap: 2px; } }
+    </style>
 </head>
-<body>
-   
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
+<body data-page="blog" data-root="">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="index.html">Biraj_Kharel v26</a> &rsaquo; Manage &rsaquo; Sketches</div>
+    <h1 class="page-title">Notes</h1>
+    <p class="page-sub">Short sketches of things I've learned from my own projects. Click a note to read it; each one links to the full project and data.</p>
+
+    <div class="notes">
+      <details class="note-card" id="hills" open><summary><span class="ico"><i class="ti ti-mountain"></i></span><span><span class="meta">Sketch 1 · EV energy · from my 2024 paper</span><h3>On hilly roads, altitude, not speed, drains the battery</h3></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="note-body prose">
+          <p>When we logged GPS and BMS data on our converted EV over a hilly route, altitude and state of charge had a correlation of −0.89. Climbing was the single biggest driver of battery drain, which is why lab range figures from flat cycles mislead drivers in places like Nepal.</p>
+          <p>The other half of the story is regeneration: the route's energy loss fell from 20.86 kWh without regenerative braking to 10.22 kWh with it. On terrain like this, regen is essential, not an add-on.</p>
+          <div class="go"><a class="btn primary" href="project file/energy consumption.html"><i class="ti ti-box"></i> Full study</a><a class="btn" href="https://doi.org/10.1088/1755-1315/1385/1/012024" target="_blank" rel="noopener"><i class="ti ti-file-text"></i> Paper (DOI)</a></div></div></details>
+
+      <details class="note-card" id="cooling"><summary><span class="ico"><i class="ti ti-temperature"></i></span><span><span class="meta">Sketch 2 · Thermal management · CFD</span><h3>Put the coolant where the heat is: variable-width channels</h3></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="note-body prose">
+          <p>I compared five cooling-plate layouts for a lithium-ion module in ANSYS Fluent, from a standard serpentine to parallel mini-channels. The best design wasn't the most complex one: it was a serpentine whose width changes so coolant speeds up over the known hot spots.</p>
+          <p>That targeted change cut peak temperature gradients by more than 5 °C and improved uniformity by about 15%, which projects to as much as 20% more cycle life under high load.</p>
+          <div class="go"><a class="btn primary" href="project file/battery cooling.html"><i class="ti ti-box"></i> Full project</a></div></div></details>
+
+      <details class="note-card" id="soh"><summary><span class="ico"><i class="ti ti-battery-3"></i></span><span><span class="meta">Sketch 3 · Battery health · machine learning</span><h3>Fleet data makes battery health predictable</h3></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="note-body prose">
+          <p>Using real-time data from five public electric buses, our ML models forecast battery state of health with reported accuracy above 95%. That's enough to plan maintenance before a pack becomes a problem, and to decide which packs are good candidates for a second life.</p>
+          <p>I later turned the workflow into an open-source Streamlit app with ingestion, training, real-time prediction, and a fleet dashboard.</p>
+          <div class="go"><a class="btn primary" href="project file/battery-soh.html"><i class="ti ti-box"></i> Full project</a><a class="btn" href="https://github.com/Birazk/Battery-Health-Tracker" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i> Code</a></div></div></details>
+
+      <details class="note-card" id="aging"><summary><span class="ico"><i class="ti ti-wheel"></i></span><span><span class="meta">Sketch 4 · Tire research · in progress</span><h3>Most durability models assume the rubber never ages</h3></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="note-body prose">
+          <p>Tires age in service long before they wear out: ozone, heat, and humidity change how the compound stiffens and dissipates energy, and aged rubber cracks sooner under the same loads. Yet most durability models still use unaged material properties.</p>
+          <p>My current research connects aging experiments, Abaqus and Endurica simulation, and physics-informed neural networks to close that gap.</p>
+          <div class="go"><a class="btn primary" href="research.html"><i class="ti ti-chart-dots-3"></i> Research overview</a></div></div></details>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-    <div class="nav-container">
-        
-        <!-- Logo -->
-        <div class="nav-logo">
-            <a href="index.html">
-                <span class="logo-text">Biraj</span>
-                <span class="logo-accent">Kharel</span>
-            </a>
-        </div>
-        
-        <!-- Menu Links -->
-        <ul class="nav-menu">
-            <!-- NOTE: The 'active' class will be added by JavaScript automatically -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="timeline.html">Timeline</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-        
-        <!-- Hamburger Menu Icon -->
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
-
-
-    <!-- Blog Header -->
-    <section class="blog-header">
-        <div class="container">
-            <p class="section-label">Thoughts & Insights</p>
-            <h1 class="section-title">Blog</h1>
-            <p class="blog-intro">Exploring electric vehicles, sustainable engineering, and data-driven innovation</p>
-        </div>
+    <section class="section">
+      <div class="section-head"><i class="ti ti-history"></i><h2>Version history</h2><span class="rule"></span></div>
+      <div class="changelog">
+        <div><span class="v">v26</span><code>Jan 2026</code><span>Joined The University of Akron as a graduate research and teaching assistant; <a href="research.html">tire aging research</a> begins.</span></div>
+        <div><span class="v">v25</span><code>2025</code><span>Completed <a href="project file/battery cooling.html">battery cooling CFD</a>; released <a href="projects.html#software">open-source EV tools</a>.</span></div>
+        <div><span class="v">v24</span><code>2024</code><span>Two papers published in IOP EES; <a href="project file/modular_vehicle.html">modular EV chassis</a> validated.</span></div>
+        <div><span class="v">v23</span><code>2023</code><span>B.E. completed; joined <a href="timeline.html#estrl">ESTRL</a> as a research assistant.</span></div>
+        <div><span class="v">v22</span><code>2022</code><span>Competed at <a href="project file/shell-eco-marathon.html">Shell Eco-marathon Asia</a>.</span></div>
+        <div><span class="v">v20</span><code>2020</code><span>Started the <a href="project file/ic to electric.html">Maruti 800 EV conversion</a>.</span></div>
+      </div>
     </section>
 
-    <!-- Blog Grid -->
-    <section class="blog-section">
-        <div class="container">
-            <div class="blog-grid">
-                
-                <!-- Blog Post 1 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="image-placeholder">🔋</div>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date">Coming Soon</span>
-                        <h3>The Future of Battery Thermal Management in EVs</h3>
-                        <p>Exploring advanced cooling strategies to improve battery life and performance in electric vehicles operating in diverse climates.</p>
-                        <div class="blog-tags">
-                            <span class="tag">Electric Vehicles</span>
-                            <span class="tag">Thermal Systems</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Blog Post 3 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="image-placeholder">📊</div>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date">Coming Soon</span>
-                        <h3>Data Analytics for Vehicle Performance Optimization</h3>
-                        <p>How data-driven approaches and predictive analytics can revolutionize vehicle diagnostics and fleet management.</p>
-                        <div class="blog-tags">
-                            <span class="tag">Data Analytics</span>
-                            <span class="tag">Performance</span>
-                        </div>
-                    </div>
-                </article>
-
-               <!-- Blog Post 5 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <div class="image-placeholder">🔧</div>
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-date">Coming Soon</span>
-                        <h3>MATLAB & Simulink for EV Powertrain Design</h3>
-                        <p>A technical overview of using simulation tools for optimizing electric vehicle powertrains and control strategies.</p>
-                        <div class="blog-tags">
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">Simulation</span>
-                        </div>
-                    </div>
-                </article>
-                
-            </div>
-        </div>
-    </section>
-
-   <!-- ===================================
-   ENHANCED FOOTER (Use in all HTML files)
-   ==================================== -->
-<footer class="footer-modern">
-    <div class="container">
-        
-        <!-- Back to Top Button -->
-        <a href="#" class="back-to-top" aria-label="Back to top">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 19V5M5 12l7-7 7 7"/>
-            </svg>
-        </a>
-
-        <!-- Main Footer Content Grid -->
-        <div class="footer-content">
-            
-            <!-- Column 1: Brand -->
-            <div class="footer-brand">
-                <h3 class="footer-logo">Biraj Kharel</h3>
-                <p>Building smarter, cleaner systems for a sustainable future.</p>
-            </div>
-            
-            <!-- Column 2: Quick Links -->
-            <div class="footer-links">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                </ul>
-            </div>
-            
-            <!-- Column 3: Social Media -->
-            <div class="footer-social">
-                <h4 class="footer-heading">Connect</h4>
-                <div class="social-icon-group">
-                    <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
-                        <!-- LinkedIn SVG Icon -->
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://github.com/Birazk" target="_blank" class="social-icon" aria-label="GitHub">
-                        <!-- GitHub SVG Icon -->
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        
-        <!-- Bottom Bar with Copyright -->
-        <div class="footer-bottom">
-            <p>&copy; 2026 Biraj Kharel. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
-
-
-    <script src="js/theme.js"></script>
+    <div class="status-foot"><span>Sketches · 4 notes · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script>
+(function () { const el = location.hash && document.getElementById(location.hash.slice(1)); if (el && el.tagName === 'DETAILS') el.open = true; })();
+</script>
+<script src="js/site-data.js?v=202611232304"></script>
+<script src="js/fusion.js?v=202611232304"></script>
 </body>
 </html>

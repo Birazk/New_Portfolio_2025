@@ -1,0 +1,25 @@
+{
+ "version": "20261123223138",
+ "entrypoint": "app.py",
+ "requirements": [
+  "plotly",
+  "folium",
+  "scikit-learn",
+  "scipy",
+  "seaborn",
+  "matplotlib",
+  "joblib"
+ ],
+ "files": {
+  "app.py": "src/app.py",
+  "models/__init__.py": "src/models/__init__.py",
+  "models/ml_models.py": "src/models/ml_models.py",
+  "utils/__init__.py": "src/utils/__init__.py",
+  "utils/data_processor.py": "src/utils/data_processor.py",
+  "utils/visualization.py": "src/utils/visualization.py",
+  "utils/energy_calculator.py": "src/utils/energy_calculator.py",
+  "utils/map_utils.py": "src/utils/map_utils.py",
+  "utils/cost_calculator.py": "src/utils/cost_calculator.py",
+  "streamlit_folium.py": "src/streamlit_folium.py"
+ }
+}

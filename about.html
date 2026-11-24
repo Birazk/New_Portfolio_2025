@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Biraj Kharel</title>
+    <meta name="description" content="About Biraj Kharel: mechanical engineer working on machine learning, finite element modeling, and neural networks. Education, experience, skills, publications, and certifications.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/fusion.css?v=202611232304">
+    <style>
+        .sheet { background: #fdfdfb; border: 1px solid #c9c9c0; box-shadow: var(--shadow); padding: 14px; margin-top: 14px; }
+        .sheet-inner { border: 2px solid #2b2d30; position: relative; padding: 28px 30px 30px; }
+        .zone { position: absolute; font-family: var(--mono); font-size: 10px; color: #8a8a80; }
+        .zone.t { top: -15px; } .zone.l { left: -12px; }
+        .sheet h2.sh { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #2b2d30; display: flex; align-items: center; gap: 8px; margin: 30px 0 12px; scroll-margin-top: 12px; }
+        .sheet h2.sh:first-of-type { margin-top: 0; }
+        .sheet h2.sh .ti { color: var(--orange); }
+        .sheet h2.sh::after { content: ""; flex: 1; border-top: 1px dashed #b9b9b0; }
+        .profile { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
+        .profile .photo { border: 1px solid #2b2d30; padding: 6px; background: #fff; position: relative; }
+        .profile .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; }
+        .profile .photo .lbl { font-family: var(--mono); font-size: 10px; text-align: center; padding-top: 6px; color: #555; }
+        .callout { font-family: var(--mono); font-size: 12px; color: var(--sketch); }
+        .rows { display: grid; gap: 10px; }
+        .row { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 12px 14px; background: #fff; border: 1px solid var(--line); border-radius: 4px; color: var(--text); }
+        a.row:hover { border-color: var(--select); text-decoration: none; box-shadow: 0 0 0 2px var(--select-soft); }
+        .row .when { font-family: var(--mono); font-size: 12px; color: var(--text-2); }
+        .row b { display: block; }
+        .row small { color: var(--text-2); font-size: 13px; }
+        .row .go { font-size: 12px; color: var(--select); margin-top: 4px; display: inline-flex; gap: 4px; align-items: center; }
+        .bodies { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+        .bodyc { background: #fff; border: 1px solid var(--line); border-radius: 4px; padding: 12px 14px; scroll-margin-top: 12px; }
+        .bodyc:target { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-soft); }
+        .bodyc h3 { font-size: 14px; display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+        .bodyc h3 .ti { color: #8a6a3d; font-size: 18px; }
+        .bodyc .mat { font-family: var(--mono); font-size: 11px; color: var(--text-3); margin-bottom: 8px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+        .chips a, .chips span { font-size: 12px; padding: 2px 8px; border-radius: 3px; background: #f1f3f5; color: #33383d; border: 1px solid transparent; }
+        .chips a:hover { border-color: var(--select); color: var(--select); text-decoration: none; }
+        .pubs { display: grid; gap: 10px; }
+        .pub { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; padding: 14px; background: #fff; border: 1px solid var(--line); border-radius: 4px; color: var(--text); }
+        .pub:hover { border-color: var(--select); text-decoration: none; }
+        .pub .n { font-family: var(--mono); font-size: 12px; color: #fff; background: #3f8f5a; width: 30px; height: 30px; border-radius: 4px; display: grid; place-items: center; }
+        .pub small { color: var(--text-2); display: block; font-size: 12px; }
+        .certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+        .cert { background: #fff; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; cursor: zoom-in; text-align: left; padding: 0; }
+        .cert:hover { border-color: var(--select); box-shadow: 0 0 0 2px var(--select-soft); }
+        .cert img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line-soft); }
+        .cert div { padding: 8px 10px; }
+        .cert b { font-size: 13px; display: block; line-height: 1.3; }
+        .cert small { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+        .acts { list-style: none; display: grid; gap: 8px; }
+        .acts li { display: flex; gap: 10px; color: #33383d; }
+        .acts .ti { color: var(--orange); margin-top: 4px; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+        .contact-grid a { display: flex; gap: 10px; align-items: center; padding: 12px 14px; background: #fff; border: 1px solid var(--line); border-radius: 4px; color: var(--text); }
+        .contact-grid a:hover { border-color: var(--select); text-decoration: none; }
+        .contact-grid .ti { font-size: 22px; color: var(--select); }
+        .contact-grid small { display: block; color: var(--text-2); font-size: 12px; }
+        .titleblock { margin: 34px 0 0 auto; width: min(460px, 100%); border: 2px solid #2b2d30; font-size: 11px; background: #fff; }
+        .titleblock .r { display: grid; grid-template-columns: 110px 1fr; border-bottom: 1px solid #2b2d30; }
+        .titleblock .r:last-child { border-bottom: 0; }
+        .titleblock .r > * { padding: 5px 8px; }
+        .titleblock .r > span:first-child { font-family: var(--mono); color: #666; border-right: 1px solid #2b2d30; }
+        .titleblock b { font-size: 13px; }
+        @media (max-width: 760px) { .profile { grid-template-columns: 1fr; } .profile .photo { max-width: 240px; } .row { grid-template-columns: 1fr; gap: 4px; } .sheet-inner { padding: 20px 16px; } .zone { display: none; } }
+    </style>
+</head>
+<body data-page="about" data-root="">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="index.html">Biraj_Kharel v26</a> &rsaquo; Drawing &rsaquo; Sheet 1 of 1 · About</div>
+    <h1 class="page-title">About</h1>
+    <p class="page-sub">My engineering drawing: who I am, what I've done, and what I work with. Click any item for more detail.</p>
+
+    <div class="sheet"><div class="sheet-inner">
+      <span class="zone t" style="left:25%">1</span><span class="zone t" style="left:50%">2</span><span class="zone t" style="left:75%">3</span>
+      <span class="zone l" style="top:20%">A</span><span class="zone l" style="top:50%">B</span><span class="zone l" style="top:80%">C</span>
+
+      <h2 class="sh" id="profile"><i class="ti ti-user"></i> Profile</h2>
+      <div class="profile">
+        <div class="photo zoomable"><img src="Index photos/headshot.jpg" alt="Biraj Kharel"><div class="lbl">DETAIL A · SCALE 1:1</div></div>
+        <div class="prose">
+          <p style="font-size:18px;color:var(--text);font-weight:600;">Mechanical Engineer interested in machine learning, finite element modeling, and neural networks.</p>
+          <p>I work at the intersection of computational mechanics and data. I use FEM for material behavior, structural mechanics, transient response, heat transfer, and thermo-mechanical analysis, and I apply neural networks and physics-informed neural networks (PINNs) to constitutive modeling, parameter identification, surrogate modeling, and remaining-life prediction.</p>
+          <p>Today I research tire rubber aging, durability, and fatigue at The University of Akron. Before that, I spent three years at Kathmandu University's Energy Systems and Technology Research Laboratory on EV powertrains, battery health prognostics, and thermal management, and I've built and converted real vehicles along the way.</p>
+          <p class="callout">&#8600; Based in Akron, Ohio · originally from Kathmandu, Nepal</p>
+          <div class="cta" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
+            <a class="btn primary" href="Biraj-Kharel-CV.pdf" target="_blank"><i class="ti ti-file-cv"></i> Download CV (PDF)</a>
+            <a class="btn" href="#contact"><i class="ti ti-mail"></i> Contact</a>
+            <a class="btn" href="research.html"><i class="ti ti-chart-dots-3"></i> Current research</a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="sh" id="education"><i class="ti ti-school"></i> Education</h2>
+      <div class="rows">
+        <a class="row" href="research.html"><span class="when">Jan 2026 – present</span><span><b>Ph.D., Mechanical Engineering · The University of Akron</b><small>Physics-informed neural networks for hyperelastic constitutive models; tire wear and degradation with aging data, ML, and Abaqus FEM.</small><span class="go">Open research <i class="ti ti-arrow-right"></i></span></span></a>
+        <a class="row" href="timeline.html#bachelors"><span class="when">Aug 2018 – May 2023</span><span><b>B.E., Mechanical Engineering · Kathmandu University, Dhulikhel</b><small>Dissertation: research and analysis on the factors affecting the on-road energy consumption and range of an electric vehicle.</small><span class="go">See on timeline <i class="ti ti-arrow-right"></i></span></span></a>
+      </div>
+
+      <h2 class="sh" id="experience"><i class="ti ti-briefcase"></i> Experience</h2>
+      <div class="rows">
+        <a class="row" href="timeline.html#gra"><span class="when">Jan 2026 – present</span><span><b>Graduate Research Assistant · University of Akron</b><small>Dynamic characterization of tire elastomers (20–1500 Hz), Abaqus aging workflows, and Endurica fatigue inputs.</small><span class="go">Details <i class="ti ti-arrow-right"></i></span></span></a>
+        <a class="row" href="timeline.html#gta"><span class="when">Jan 2026 – present</span><span><b>Graduate Teaching Assistant · University of Akron</b><small>Rubric-based grading, feedback, and course coordination for mechanical engineering classes.</small><span class="go">Details <i class="ti ti-arrow-right"></i></span></span></a>
+        <a class="row" href="timeline.html#estrl"><span class="when">Jun 2023 – Nov 2025</span><span><b>Research Assistant · ESTRL, Kathmandu University</b><small>Modular EV platform, diesel-bus EV conversion, and battery SOH machine learning.</small><span class="go">Details <i class="ti ti-arrow-right"></i></span></span></a>
+        <a class="row" href="timeline.html#dor"><span class="when">Jan – Mar 2023</span><span><b>Intern, Heavy Equipment Division · Department of Roads, Nepal</b><small>Maintenance and diagnostics of trucks, bulldozers, and excavators; lathe, welding, forklift.</small><span class="go">Details <i class="ti ti-arrow-right"></i></span></span></a>
+        <a class="row" href="project file/shell-eco-marathon.html"><span class="when">Oct – Nov 2022</span><span><b>Vehicle Optimization &amp; Design · Team Junkiri, Shell Eco-marathon</b><small>Lightweight aerodynamic three-wheeler; fabrication, engine installation, EFI tuning.</small><span class="go">Open project <i class="ti ti-arrow-right"></i></span></span></a>
+      </div>
+
+      <h2 class="sh" id="skills"><i class="ti ti-cube-plus"></i> Bodies · skills</h2>
+      <div class="bodies">
+        <div class="bodyc" id="skills-sim"><h3><i class="ti ti-cube"></i> Simulation &amp; FEA</h3><div class="mat">Material: Abaqus · ANSYS</div>
+          <div class="chips"><a href="research.html">Abaqus</a><a href="research.html">Endurica</a><a href="project file/modular_vehicle.html">ANSYS Workbench</a><a href="project file/battery cooling.html">ANSYS Fluent</a><a href="project file/battery cooling.html">CFD</a><a href="research.html">Computational mechanics</a><a href="research.html">Viscoelastic modeling</a><a href="project file/modular_vehicle.html">Structural &amp; thermal FEA</a><a href="project file/Public Bus Conversion.html">Digital twins</a></div></div>
+        <div class="bodyc" id="skills-ml"><h3><i class="ti ti-cube"></i> ML &amp; neural networks</h3><div class="mat">Material: Python</div>
+          <div class="chips"><a href="research.html">PINNs</a><a href="project file/battery-soh.html">Battery SOH / EoL prediction</a><a href="project file/e-voyager.html">Neural networks</a><a href="project file/battery-soh.html">XGBoost · Random Forest</a><span>Regression</span><span>NumPy · pandas · SciPy</span><span>scikit-learn · Matplotlib</span><a href="project file/ev-dashboard.html">Streamlit</a></div></div>
+        <div class="bodyc" id="skills-cad"><h3><i class="ti ti-cube"></i> CAD &amp; design</h3><div class="mat">Material: SolidWorks · Fusion 360</div>
+          <div class="chips"><a href="#certifications">SolidWorks (CSWA)</a><a href="gallery.html">Fusion 360</a><span>AutoCAD</span><a href="gallery.html">Blender renders</a><a href="project file/modular_vehicle.html">DFMA</a><span>Additive manufacturing concepts</span></div></div>
+        <div class="bodyc" id="skills-hw"><h3><i class="ti ti-cube"></i> EV, controls &amp; tools</h3><div class="mat">Material: MATLAB · hardware</div>
+          <div class="chips"><a href="project file/Public Bus Conversion.html">MATLAB/Simulink</a><span>Optimization Toolbox</span><a href="project file/battery-soh.html">CAN bus · OBD-II</a><a href="project file/ic to electric.html">HV wiring · BMS</a><span>LabVIEW</span><span>Excel/VBA</span><span>Crystal Ball (Oracle)</span><span>EV validation testing</span></div></div>
+      </div>
+
+      <h2 class="sh" id="publications"><i class="ti ti-file-text"></i> Publications</h2>
+      <div class="pubs">
+        <a class="pub" href="project file/hydropower sustainability.html"><span class="n">1</span><span><b>Sustainable Manufacturing Practices in the Hydropower Industry: A Review</b><small>IOP Conf. Ser.: Earth Environ. Sci. 1385, 012017 (2024) · DOI 10.1088/1755-1315/1385/1/012017</small></span><i class="ti ti-arrow-right"></i></a>
+        <a class="pub" href="project file/energy consumption.html"><span class="n">2</span><span><b>Integrated analysis of on-road energy consumption and range optimization in the conversion of an IC engine vehicle to a battery-electric vehicle</b><small>IOP Conf. Ser.: Earth Environ. Sci. 1385, 012024 (2024) · DOI 10.1088/1755-1315/1385/1/012024</small></span><i class="ti ti-arrow-right"></i></a>
+      </div>
+
+      <h2 class="sh" id="certifications"><i class="ti ti-certificate"></i> Certifications · click to view</h2>
+      <div class="certs">
+        <button class="cert zoomable"><img src="Certifications/Solidworks Mechanical Design.png" alt="Certified SOLIDWORKS Associate, Mechanical Design" loading="lazy"><div><b>SOLIDWORKS Associate (CSWA), Mechanical Design</b><small>Dassault Systèmes · Feb 2023</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Solidworks_ Surfacing.png" alt="SOLIDWORKS Professional, Advanced Surfacing" loading="lazy"><div><b>SOLIDWORKS Professional, Advanced Surfacing</b><small>Dassault Systèmes · 2023</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/AutoDesk -Modelling and Desing for Manufacturing.png" alt="Autodesk Modeling and Design for Manufacturing" loading="lazy"><div><b>Modeling and Design for Manufacturing</b><small>Autodesk · 2023</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Supervised Machine Learning.png" alt="Supervised Machine Learning: Regression and Classification" loading="lazy"><div><b>Supervised ML: Regression and Classification</b><small>Stanford · Feb 2023</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Excel.jpg" alt="Data Analytics with Excel" loading="lazy"><div><b>Data Analytics with Excel</b><small>2023</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Motors and Motor Control Circuit.png" alt="Motors and Motor Control Circuits" loading="lazy"><div><b>Motors and Motor Control Circuits</b><small>CU Boulder · Jan 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Sensors and Sensors Circuit Diagram.png" alt="Sensors and Sensor Circuit Design" loading="lazy"><div><b>Sensors and Sensor Circuit Design</b><small>CU Boulder · Jan 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/ADBI Policy Maker - Low Carbon Cooling.png" alt="ADBI Policy Maker E-Training: Low-Carbon Cooling" loading="lazy"><div><b>Policy Maker E-Training: Low-Carbon Cooling</b><small>ADB Institute · May 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/ADB Energy Economics, Environment, and Policy.png" alt="Energy Economics, Environment, and Policy" loading="lazy"><div><b>Energy Economics, Environment, and Policy</b><small>ADB Institute · May 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/ADBI - Renewable Energy.png" alt="ADBI Renewable Energy" loading="lazy"><div><b>Renewable Energy</b><small>ADB Institute · 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Matlab _ Simulink Onramp.png" alt="MATLAB Simulink Onramp" loading="lazy"><div><b>Simulink Onramp</b><small>MathWorks · Jul 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/Matlab_Battery Onramp.png" alt="MATLAB Simscape Battery Onramp" loading="lazy"><div><b>Simscape Battery Onramp</b><small>MathWorks · Jul 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/RE100_Introduction to Renewable Energy.png" alt="Introduction to Renewable Energy" loading="lazy"><div><b>Introduction to Renewable Energy</b><small>Solar Energy International · Jul 2025</small></div></button>
+        <button class="cert zoomable"><img src="Certifications/COFAS-web.jpg" alt="COFAS-2014 International Computer Olympiad" loading="lazy"><div><b>17th International Computer Olympiad (COFAS-2014)</b><small>City Montessori School, Lucknow · Oct 2014</small></div></button>
+      </div>
+
+      <h2 class="sh" id="activities"><i class="ti ti-users"></i> Activities</h2>
+      <ul class="acts">
+        <li><i class="ti ti-point-filled"></i><span>Volunteer, AIU North Zone Vice Chancellors' Meet 2024, organized by the Association of Indian Universities and hosted by Kathmandu University.</span></li>
+        <li><i class="ti ti-point-filled"></i><span><a href="project file/shell-eco-marathon.html">Shell Eco-marathon</a> virtual training on autonomous programming, energy reduction, and aerodynamics.</span></li>
+        <li><i class="ti ti-point-filled"></i><span>Organizing member, AMES bulletin board, Kathmandu University.</span></li>
+        <li><i class="ti ti-point-filled"></i><span>24-hour hardware hackathon "Mechathon: Innovation for Impact", organized by AMES, Kathmandu University.</span></li>
+        <li><i class="ti ti-point-filled"></i><span>17th International Computer Olympiad COFAS-2014, Lucknow, India (see <a href="#certifications">certificate</a>).</span></li>
+      </ul>
+
+      <h2 class="sh" id="contact"><i class="ti ti-mail"></i> Contact</h2>
+      <div class="contact-grid">
+        <a href="mailto:bk233@uakron.edu"><i class="ti ti-school"></i><span><b>bk233@uakron.edu</b><small>University email (preferred)</small></span></a>
+        <a href="mailto:birazkharel@gmail.com"><i class="ti ti-mail"></i><span><b>birazkharel@gmail.com</b><small>Personal email</small></span></a>
+        <a href="https://www.linkedin.com/in/birajkharel" target="_blank" rel="noopener"><i class="ti ti-brand-linkedin"></i><span><b>LinkedIn</b><small>Connect with me</small></span></a>
+        <a href="https://github.com/Birazk" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i><span><b>GitHub · Birazk</b><small>Code and tools</small></span></a>
+      </div>
+
+      <div class="titleblock">
+        <div class="r"><span>TITLE</span><span><b>Biraj Kharel · Portfolio</b></span></div>
+        <div class="r"><span>DRAWN BY</span><span>B. Kharel</span></div>
+        <div class="r"><span>DISCIPLINE</span><span>Mechanical Engineering</span></div>
+        <div class="r"><span>DWG NO.</span><span>BK-001 · About</span></div>
+        <div class="r"><span>SHEET / REV</span><span>1 of 1 · Rev 26 · <a href="Biraj-Kharel-CV.pdf" target="_blank">Full CV (PDF)</a></span></div>
+      </div>
+    </div></div>
+
+    <div class="status-foot"><span>Drawing · BK-001 · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script src="js/site-data.js?v=202611232304"></script>
+<script src="js/fusion.js?v=202611232304"></script>
+</body>
+</html>

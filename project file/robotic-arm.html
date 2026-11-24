@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-DOF Robotic Arm Simulation | Biraj Kharel</title>
+    <meta name="description" content="Kinematics, Lagrangian dynamics, and four controllers for a planar arm, in an interactive simulator.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="../css/fusion.css?v=202611232304">
+</head>
+<body data-page="p-robot" data-root="../">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="../index.html">Biraj_Kharel v26</a> &rsaquo; <a href="../projects.html">Components</a> &rsaquo; 2DOF_Robotic_Arm <span class="ver-chip">v1</span></div>
+
+    <header class="pd-hero">
+      <div>
+        <div class="fname-line"><i class="ti ti-box"></i> 2DOF_Robotic_Arm · 2025 · Open source</div>
+        <h1 class="page-title">2-DOF Robotic Arm Simulation</h1>
+        <p class="page-sub">A simulation and analysis platform for a two-degree-of-freedom planar robotic arm, covering kinematics, dynamics, control, and visualization.</p>
+        <div class="keywords"><a class="kw" href="../projects.html#simulation">Simulation</a><a class="kw" href="../projects.html#software">Software &amp; ML</a><span class="kw hot">Python</span><span class="kw hot">Dynamics</span><span class="kw hot">Control</span><span class="kw hot">Streamlit</span></div>
+        <div class="pd-cta"><a class="btn primary big" href="../apps/robotic-arm/"><i class="ti ti-player-play"></i>Launch the live app</a><a class="btn big" href="https://github.com/Birazk/2DOF-Robotic-Arm-Simulation" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>Source code</a><span class="cta-note"><i class="ti ti-cpu"></i>Runs the real Python app in your browser · no sign-up</span></div>
+      </div>
+      <a class="pd-hero-media pd-hero-run" href="../apps/robotic-arm/" title="Launch the live app"><img src="../Gallery/Robotic arm.png" alt="CAD model of a robotic arm"><span class="run-chip"><i class="ti ti-player-play-filled"></i>Run simulation</span></a>
+    </header>
+
+    <section class="section"><div class="section-head"><i class="ti ti-ruler-measure"></i><h2>Measure</h2><span class="rule"></span></div><div class="measure"><div class="m"><div class="v">4</div><div class="k">Controllers: PID, computed torque, adaptive, sliding mode</div></div><div class="m"><div class="v">3</div><div class="k">Trajectory types</div></div></div></section>
+
+    <div class="pd-layout section">
+      <div class="pd-main"><section class="dialog pd-sec" id="s1"><div class="dialog-head"><i class="ti ti-list-check"></i> Capabilities</div><div class="dialog-body prose"><ul class="checks"><li><b>Kinematics:</b> analytical forward and inverse kinematics with singularity detection.</li><li><b>Dynamics:</b> full Lagrangian model with mass, Coriolis, and gravity terms.</li><li><b>Control:</b> PID, computed torque, adaptive, and robust sliding-mode controllers.</li><li><b>Trajectories:</b> polynomial point-to-point, circular, and figure-8 paths.</li><li><b>Analysis:</b> energy efficiency, tracking accuracy, and stability metrics, with data export.</li></ul></div></section></div>
+      <aside class="pd-side">
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-list-tree"></i> In this component</div><div class="pd-toc"><a class="node d1" href="#s1"><i class="ti ti-list-check ico comp"></i><span class="lbl">Capabilities</span></a></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-info-square"></i> Properties</div><div class="dialog-body"><table class="props"><tr><td>Year</td><td>2025</td></tr><tr><td>Type</td><td>Software tool</td></tr></table></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-tool"></i> Tools &amp; technologies</div><div class="dialog-body"><ul class="tool-list"><li><i class="ti ti-brand-python"></i>Python, NumPy</li><li><i class="ti ti-chart-line"></i>Streamlit and Plotly</li></ul></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-link"></i> Links</div><div class="dialog-body pd-links"><a class="btn primary" href="../apps/robotic-arm/" ><i class="ti ti-player-play"></i>Launch the live app</a><a class="btn " href="https://github.com/Birazk/2DOF-Robotic-Arm-Simulation" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View the code on GitHub</a><a class="btn" href="../projects.html"><i class="ti ti-arrow-left"></i>All components</a></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-components"></i> Related components</div><div class="pd-rel"><a class="rel" href="modular_vehicle.html"><i class="ti ti-box"></i><span><b>Modular_EV_Chassis</b><small>Modular Electric Vehicle Chassis for Rural Nepal</small></span><i class="ti ti-chevron-right"></i></a><a class="rel" href="ev-dashboard.html"><i class="ti ti-box"></i><span><b>EV_Drive_Cycle_Dashboard</b><small>Electric Vehicle Dashboard</small></span><i class="ti ti-chevron-right"></i></a></div></div>
+      </aside>
+    </div>
+
+    <nav class="pd-pager section" aria-label="More components">
+      <a href="e-voyager.html"><i class="ti ti-arrow-left"></i><span><small>Previous component</small>e_Voyager · EV Energy Consumption Analysis</span></a>
+      <a href="modular_vehicle.html" class="next"><span><small>Next component</small>Modular Electric Vehicle Chassis for Rural Nepal</span><i class="ti ti-arrow-right"></i></a>
+    </nav>
+
+    <div class="status-foot"><span>2DOF_Robotic_Arm v1 · 1 features · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script src="../js/site-data.js?v=202611232304"></script>
+<script src="../js/fusion.js?v=202611232304"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery State-of-Health Prognostics | Biraj Kharel</title>
+    <meta name="description" content="ML models forecasting battery degradation from five electric buses (&gt;95% accuracy), plus an open-source SOH app.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="../css/fusion.css?v=202611232304">
+</head>
+<body data-page="p-soh" data-root="../">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="../index.html">Biraj_Kharel v26</a> &rsaquo; <a href="../projects.html">Components</a> &rsaquo; Battery_SOH_Prognostics <span class="ver-chip">v3</span></div>
+
+    <header class="pd-hero">
+      <div>
+        <div class="fname-line"><i class="ti ti-box"></i> Battery_SOH_Prognostics · 2023 – 2025 · ESTRL, Kathmandu University</div>
+        <h1 class="page-title">Battery State-of-Health Prognostics</h1>
+        <p class="page-sub">Predicting battery degradation from real-time fleet data to support predictive maintenance and second-life battery planning.</p>
+        <div class="keywords"><a class="kw" href="../projects.html#ev">Electric vehicles</a><a class="kw" href="../projects.html#research">Research &amp; papers</a><a class="kw" href="../projects.html#software">Software &amp; ML</a><span class="kw hot">Machine learning</span><span class="kw hot">Python</span><span class="kw hot">XGBoost</span><span class="kw hot">Streamlit</span></div>
+        <div class="pd-cta"><a class="btn primary big" href="../apps/battery-soh/"><i class="ti ti-player-play"></i>Launch the live app</a><a class="btn big" href="https://github.com/Birazk/Battery-Health-Tracker" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>Source code</a><span class="cta-note"><i class="ti ti-cpu"></i>Runs the real Python app in your browser · no sign-up</span></div>
+      </div>
+      <a class="pd-hero-media pd-hero-run" href="../apps/battery-soh/" title="Launch the live app"><img src="../project images/SOC from BMS and Measured.png" alt="Battery state-of-charge data from the BMS"><span class="run-chip"><i class="ti ti-player-play-filled"></i>Run simulation</span></a>
+    </header>
+
+    <section class="section"><div class="section-head"><i class="ti ti-ruler-measure"></i><h2>Measure</h2><span class="rule"></span></div><div class="measure"><div class="m"><div class="v">&gt;95%</div><div class="k">Reported prediction accuracy</div></div><div class="m"><div class="v">5</div><div class="k">Public electric buses in the fleet data</div></div><div class="m"><div class="v">3</div><div class="k">Model families: RF, XGBoost, LSTM</div></div></div></section>
+
+    <div class="pd-layout section">
+      <div class="pd-main"><section class="dialog pd-sec" id="s1"><div class="dialog-head"><i class="ti ti-flask"></i> Research at ESTRL</div><div class="dialog-body prose"><p>I developed machine learning models for battery state-of-health prognostics using real-time data from five public electric buses, with reported prediction accuracy above 95%. The models support predictive maintenance and second-life battery modeling.</p></div></section><section class="dialog pd-sec" id="s2"><div class="dialog-head"><i class="ti ti-brand-github"></i> Open-source tool · Battery Health Tracker</div><div class="dialog-body prose"><p>I packaged the approach into a multi-page Streamlit application for EV battery SOH prediction across cars, buses, trucks, and motorcycles.</p><ul class="checks"><li><b>Data ingestion:</b> import and process battery data.</li><li><b>Model training:</b> Random Forest and XGBoost with hyperparameter optimization; optional LSTM for time series.</li><li><b>Real-time prediction:</b> live SOH estimates with confidence intervals.</li><li><b>Fleet dashboard:</b> monitor a whole fleet's battery health.</li><li><b>Model comparison:</b> side-by-side performance analysis.</li><li><b>Storage:</b> PostgreSQL database and Plotly visualizations.</li></ul></div></section></div>
+      <aside class="pd-side">
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-list-tree"></i> In this component</div><div class="pd-toc"><a class="node d1" href="#s1"><i class="ti ti-flask ico comp"></i><span class="lbl">Research at ESTRL</span></a><a class="node d1" href="#s2"><i class="ti ti-brand-github ico comp"></i><span class="lbl">Open-source tool · Battery Health Tracker</span></a></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-info-square"></i> Properties</div><div class="dialog-body"><table class="props"><tr><td>Timeline</td><td>2023 – 2025</td></tr><tr><td>Lab</td><td>ESTRL</td></tr><tr><td>Data</td><td>5-bus electric fleet</td></tr><tr><td>Code</td><td>MIT license</td></tr></table></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-tool"></i> Tools &amp; technologies</div><div class="dialog-body"><ul class="tool-list"><li><i class="ti ti-brand-python"></i>Python, scikit-learn, XGBoost</li><li><i class="ti ti-chart-line"></i>Streamlit and Plotly</li><li><i class="ti ti-database"></i>PostgreSQL</li><li><i class="ti ti-plug-connected"></i>CAN bus / OBD-II data</li></ul></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-link"></i> Links</div><div class="dialog-body pd-links"><a class="btn primary" href="../apps/battery-soh/" ><i class="ti ti-player-play"></i>Launch the live app</a><a class="btn " href="https://github.com/Birazk/Battery-Health-Tracker" target="_blank" rel="noopener"><i class="ti ti-brand-github"></i>View the code on GitHub</a><a class="btn" href="../projects.html"><i class="ti ti-arrow-left"></i>All components</a></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-components"></i> Related components</div><div class="pd-rel"><a class="rel" href="Public Bus Conversion.html"><i class="ti ti-box"></i><span><b>Bus_EV_Conversion</b><small>Eicher Skyline Bus: Diesel to Electric Conversion</small></span><i class="ti ti-chevron-right"></i></a><a class="rel" href="battery cooling.html"><i class="ti ti-box"></i><span><b>Battery_Liquid_Cooling</b><small>Enhancing Battery Cycle Life Through Optimized Liquid Cooling</small></span><i class="ti ti-chevron-right"></i></a></div></div>
+      </aside>
+    </div>
+
+    <nav class="pd-pager section" aria-label="More components">
+      <a href="hydropower sustainability.html"><i class="ti ti-arrow-left"></i><span><small>Previous component</small>Sustainable Manufacturing Practices in the Hydropower Industry</span></a>
+      <a href="shell-eco-marathon.html" class="next"><span><small>Next component</small>Shell Eco-marathon Asia 2022 · Team Junkiri</span><i class="ti ti-arrow-right"></i></a>
+    </nav>
+
+    <div class="status-foot"><span>Battery_SOH_Prognostics v3 · 2 features · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script src="../js/site-data.js?v=202611232304"></script>
+<script src="../js/fusion.js?v=202611232304"></script>
+</body>
+</html>

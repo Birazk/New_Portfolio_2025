@@ -3,420 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Career Timeline | Biraj Kharel</title>
-    <meta name="description" content="Academic and professional timeline of Biraj Kharel – Mechanical Engineer interested in machine learning, FEM, neural networks, EV systems, and battery research.">
-
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/timeline.css">
+    <title>Timeline | Biraj Kharel</title>
+    <meta name="description" content="Career timeline of Biraj Kharel, Mechanical Engineer: from Kathmandu University and EV builds to research on tire aging and physics-informed neural networks at The University of Akron.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="css/fusion.css?v=202611232304">
+    <style>
+        .scrub { display: flex; align-items: center; gap: 0; margin-top: 22px; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 10px 14px; overflow-x: auto; }
+        .scrub a { flex: 1; min-width: 70px; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--text-2); position: relative; padding-top: 16px; }
+        .scrub a::before { content: ""; position: absolute; top: 4px; left: 0; right: 0; height: 2px; background: var(--line); }
+        .scrub a::after { content: ""; position: absolute; top: 0; left: 50%; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #fff; border: 2px solid var(--orange); }
+        .scrub a:hover { color: var(--select); text-decoration: none; }
+        .feats { position: relative; display: grid; gap: 12px; margin-top: 26px; padding-left: 34px; }
+        .feats::before { content: ""; position: absolute; left: 14px; top: 6px; bottom: 6px; width: 2px; background: repeating-linear-gradient(180deg, var(--text-3) 0 6px, transparent 6px 10px); opacity: .6; }
+        .feat { position: relative; scroll-margin-top: 14px; }
+        .feat > summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; transition: border-color .15s, box-shadow .15s; }
+        .feat > summary::-webkit-details-marker { display: none; }
+        .feat > summary:hover { border-color: var(--select); }
+        .feat[open] > summary, .feat:target > summary { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-soft); }
+        .feat .pin { position: absolute; left: -34px; top: 12px; width: 30px; height: 30px; display: grid; place-items: center; background: #fff; border: 1px solid var(--line); border-radius: 4px; font-size: 16px; color: #3d6fa8; }
+        .feat.edu .pin { color: #6a4fb3; } .feat.build .pin { color: var(--orange); } .feat.paper .pin { color: #3f8f5a; }
+        .feat .when { font-family: var(--mono); font-size: 12px; color: var(--text-3); }
+        .feat h3 { font-size: 16px; line-height: 1.35; }
+        .feat .org { font-size: 13px; color: var(--text-2); }
+        .feat .chev { color: var(--text-3); transition: transform .2s; }
+        .feat[open] .chev { transform: rotate(180deg); }
+        .feat .det { background: #fff; border: 1px solid var(--line); border-top: 0; border-radius: 0 0 6px 6px; margin-top: -4px; padding: 16px 18px 14px; }
+        .feat .det .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+        .feat .det .chips span { font-size: 12px; padding: 2px 8px; border-radius: 3px; background: #f1f3f5; color: #33383d; }
+        .feat .det .go { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+        .ctrls { display: flex; gap: 8px; margin-top: 14px; }
+    </style>
 </head>
+<body data-page="timeline" data-root="">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="index.html">Biraj_Kharel v26</a> &rsaquo; Animation &rsaquo; Design history</div>
+    <h1 class="page-title">Timeline</h1>
+    <p class="page-sub">My design history, newest first. Each feature shows what I did; click it to expand, or follow the links to the full project.</p>
 
-<body>
+    <nav class="scrub" aria-label="Jump to year">
+      <a href="#bachelors">2018</a><a href="#ic-ev">2020</a><a href="#shell">2022</a><a href="#estrl">2023</a><a href="#papers">2024</a><a href="#gra">2026</a>
+    </nav>
+    <div class="ctrls"><button class="btn" id="expand"><i class="ti ti-arrows-maximize"></i> Expand all</button><button class="btn" id="collapse"><i class="ti ti-arrows-minimize"></i> Collapse all</button></div>
 
-<!-- =========================
-     Animated Background
-========================= -->
-<div class="animated-bg">
-    <div class="floating-shape shape-1"></div>
-    <div class="floating-shape shape-2"></div>
-    <div class="floating-shape shape-3"></div>
-</div>
+    <div class="feats">
 
-<!-- =========================
-     Navigation
-========================= -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="nav-logo">
-            <a href="index.html">
-                <span class="logo-text">Biraj</span>
-                <span class="logo-accent">Kharel</span>
-            </a>
-        </div>
+      <details class="feat build" id="gra" open><summary><span class="pin"><i class="ti ti-cube-3d-sphere"></i></span><span><span class="when">Jan 2026 – present</span><h3>Graduate Research Assistant</h3><span class="org">The University of Akron · Akron, Ohio</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Direct dynamic characterization of tire elastomers from 20 to 1500 Hz with controlled temperature, prestrain, strain amplitude, and loading history.</li>
+          <li>Building an Abaqus workflow to simulate thermal, humidity, oxygen, and ozone aging in rubber specimens and tire components.</li>
+          <li>Preparing Abaqus output and load-cycle definitions for Endurica fatigue and durability analysis under pressure-cycle loading.</li>
+          <li>Planning aging-dependent characterization at 7-day, 2-week, and 4-week intervals.</li></ul>
+          <div class="chips"><span>Abaqus</span><span>Endurica</span><span>Viscoelasticity</span><span>Rubber aging</span><span>PINNs</span></div>
+          <div class="go"><a class="btn primary" href="research.html"><i class="ti ti-chart-dots-3"></i> Open research</a></div></div></details>
 
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="timeline.html" class="active">Timeline</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-        
-        <div class="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+      <details class="feat edu" id="gta"><summary><span class="pin"><i class="ti ti-presentation"></i></span><span><span class="when">Jan 2026 – present</span><h3>Graduate Teaching Assistant · Ph.D. student</h3><span class="org">The University of Akron</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Grade assignments and exams with consistent rubrics and give detailed, constructive feedback.</li>
+          <li>Coordinate with the instructor and TAs on schedules, office hours, and student questions.</li>
+          <li>Began the Ph.D. in Mechanical Engineering: PINNs for hyperelastic constitutive models and tire wear with aging data, ML, and Abaqus FEM.</li></ul>
+          <div class="go"><a class="btn" href="about.html#education"><i class="ti ti-school"></i> Education</a></div></div></details>
+
+      <details class="feat" id="cfd"><summary><span class="pin"><i class="ti ti-temperature"></i></span><span><span class="when">Nov 2024 – Sept 2025</span><h3>Battery liquid-cooling CFD</h3><span class="org">Research project · ANSYS Fluent</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>CFD model validated against experiments within 5%.</li>
+          <li>Compared five cooling-channel designs; a variable-width serpentine channel won.</li>
+          <li>Peak gradients cut by more than 5 °C, uniformity up 15%, projected cycle life up to 20% longer.</li></ul>
+          <div class="go"><a class="btn primary" href="project file/battery cooling.html"><i class="ti ti-box"></i> Open component</a></div></div></details>
+
+      <details class="feat paper" id="papers"><summary><span class="pin"><i class="ti ti-file-text"></i></span><span><span class="when">2024</span><h3>Two peer-reviewed publications</h3><span class="org">IOP Conference Series: Earth and Environmental Science, vol. 1385</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Sustainable Manufacturing Practices in the Hydropower Industry: A Review (Art. 012017).</li>
+          <li>Integrated analysis of on-road energy consumption and range optimization in an IC-to-electric vehicle conversion (Art. 012024).</li></ul>
+          <div class="go"><a class="btn primary" href="project file/hydropower sustainability.html"><i class="ti ti-box"></i> Hydropower review</a><a class="btn primary" href="project file/energy consumption.html"><i class="ti ti-box"></i> EV energy study</a><a class="btn" href="about.html#publications"><i class="ti ti-list"></i> All publications</a></div></div></details>
+
+      <details class="feat" id="estrl"><summary><span class="pin"><i class="ti ti-flask"></i></span><span><span class="when">Jun 2023 – Nov 2025</span><h3>Research Assistant</h3><span class="org">Energy Systems &amp; Technology Research Laboratory (ESTRL), Kathmandu University</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Engineered a modular vehicle platform with four interchangeable configurations and a role change in under 60 minutes, funded by the Royal Norwegian Embassy (Energize Nepal Program).</li>
+          <li>Led system integration and Simulink modeling for a diesel-to-electric bus conversion, projecting ~60% lower energy cost per km.</li>
+          <li>Built ML battery SOH models (&gt;95% accuracy) from five public electric buses.</li></ul>
+          <div class="chips"><span>MATLAB/Simulink</span><span>ANSYS</span><span>SolidWorks</span><span>Python ML</span></div>
+          <div class="go"><a class="btn primary" href="project file/modular_vehicle.html"><i class="ti ti-box"></i> Modular EV</a><a class="btn primary" href="project file/Public Bus Conversion.html"><i class="ti ti-box"></i> Bus conversion</a><a class="btn primary" href="project file/battery-soh.html"><i class="ti ti-box"></i> Battery SOH</a></div></div></details>
+
+      <details class="feat" id="energy-ml"><summary><span class="pin"><i class="ti ti-brain"></i></span><span><span class="when">Jan – Aug 2023</span><h3>Building energy prediction for Nepal</h3><span class="org">Machine learning project</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks"><li>Collected weather, materials, occupancy, and energy-use data.</li><li>Pre-processed the data and compared regression algorithms.</li></ul></div></details>
+
+      <details class="feat" id="dor"><summary><span class="pin"><i class="ti ti-tool"></i></span><span><span class="when">Jan – Mar 2023</span><h3>Intern, Heavy Equipment Division</h3><span class="org">Department of Roads, Government of Nepal · Baneshwor, Kathmandu</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Routine maintenance on trucks, bulldozers, and excavators: engines, transmissions, and brakes.</li>
+          <li>Helped senior engineers diagnose faults and kept detailed maintenance records.</li>
+          <li>Hands-on lathe operation, arc welding, and forklift operation.</li></ul>
+          <div class="chips"><span>Diagnostics</span><span>Heavy equipment</span><span>Welding</span></div></div></details>
+
+      <details class="feat build" id="shell"><summary><span class="pin"><i class="ti ti-trophy"></i></span><span><span class="when">Oct – Nov 2022</span><h3>Shell Eco-marathon Asia 2022 · Team Junkiri</h3><span class="org">Lombok, Indonesia</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Designed a lightweight aerodynamic three-wheeler in SolidWorks.</li>
+          <li>Led fabrication, engine installation, and EFI tuning; ran structural and aero analyses in ANSYS.</li>
+          <li>Passed technical inspection and competed.</li></ul>
+          <div class="go"><a class="btn primary" href="project file/shell-eco-marathon.html"><i class="ti ti-box"></i> Open component</a><a class="btn" href="gallery.html#projects"><i class="ti ti-photo"></i> Photos</a></div></div></details>
+
+      <details class="feat build" id="ic-ev"><summary><span class="pin"><i class="ti ti-car"></i></span><span><span class="when">May 2020 – Apr 2021</span><h3>Maruti 800 IC-to-EV conversion</h3><span class="org">Kathmandu University</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><ul class="checks">
+          <li>Converted a 28-year-old Maruti 800 into a fully electric vehicle.</li>
+          <li>Designed and installed the drivetrain: motor, battery pack, and controls.</li>
+          <li>Tested and optimized it, proving retrofits can cut emissions.</li></ul>
+          <div class="go"><a class="btn primary" href="project file/ic to electric.html"><i class="ti ti-box"></i> Open component</a></div></div></details>
+
+      <details class="feat edu" id="bachelors"><summary><span class="pin"><i class="ti ti-school"></i></span><span><span class="when">Aug 2018 – May 2023</span><h3>B.E. in Mechanical Engineering</h3><span class="org">Kathmandu University · Dhulikhel, Nepal</span></span><i class="ti ti-chevron-down chev"></i></summary>
+        <div class="det prose"><p>Dissertation: research and analysis on the factors affecting the on-road energy consumption and range of an electric vehicle, which grew into a published paper.</p>
+          <div class="go"><a class="btn primary" href="project file/energy consumption.html"><i class="ti ti-box"></i> Dissertation project</a><a class="btn" href="about.html#activities"><i class="ti ti-users"></i> Activities</a></div></div></details>
+
     </div>
-</nav>
 
-
-<!-- =========================
-     Timeline Header (Centered)
-========================= -->
-<section class="timeline-header">
-    <div class="container" style="text-align: center; max-width: 900px; margin: 0 auto;">
-
-        <!-- <p class="timeline-intro">Academic &amp; Research Journey</p> -->
-
-        <h3 class="section-title">Academic &amp; Research Journey</h3>
-
-        <h1 class="section-title">Career Timeline</h1>
-
-        <p class="timeline-intro" style="max-width: 720px; margin: 0 auto;">
-            A progression from hands‑on mechanical engineering to
-            data‑driven research in machine learning, finite‑element simulation,
-            electric mobility, and battery systems.
-        </p>
-
-    </div>
-</section>
-
-
-<!-- =========================
-     Timeline Section
-========================= -->
-<section class="timeline-section">
-<div class="container">
-<div class="timeline">
-
-<!-- ===== PhD ===== -->
-<div class="timeline-item education" data-year="2026">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Jan 2026 – Present</span>
-        <h3>Ph.D. Candidate: Mechanical Engineering</h3>
-        <h4>The University of Akron · Akron, Ohio, USA</h4>
-        <p>
-            Doctoral research focused on physics-informed machine learning,
-            constitutive modeling, tire wear prediction, and FEM-based simulation
-            of materials and energy systems.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Developing physics-informed neural networks (PINNs) for discovering hyperelastic constitutive laws.</li>
-                <li>Embedding mechanical constraints directly into neural loss functions.</li>
-                <li>Integrating experimental aging data, machine learning, and Abaqus FEM to predict tire wear.</li>
-                <li>Studying performance degradation under environmental and operational aging conditions.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">PINNs</span>
-                <span class="skill-tag">ABAQUS</span>
-                <span class="skill-tag">FEM</span>
-                <span class="skill-tag">Computational Mechanics</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== GRA ===== -->
-<div class="timeline-item" data-year="2026">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Jan 2026 – Present</span>
-        <h3>Graduate Research Assistant</h3>
-        <h4>The University of Akron · Akron, Ohio, USA</h4>
-        <p>
-            Research on tire elastomer dynamics, rubber aging, and durability, linking
-            lab measurements with Abaqus simulation and fatigue analysis.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Direct dynamic characterization of tire elastomers from 20 to 1500 Hz with controlled temperature, prestrain, strain amplitude, and loading history.</li>
-                <li>Developing an Abaqus workflow to simulate thermal, humidity, oxygen-related, and ozone aging in rubber specimens and tire components.</li>
-                <li>Preparing Abaqus output and load-cycle definitions for Endurica-based fatigue and durability analysis under pressure-cycle loading.</li>
-                <li>Planning aging-dependent material characterization at 7-day, 2-week, and 4-week intervals to connect experiments with simulation inputs.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">ABAQUS</span>
-                <span class="skill-tag">Endurica</span>
-                <span class="skill-tag">Viscoelasticity</span>
-                <span class="skill-tag">Rubber Aging</span>
-                <span class="skill-tag">Fatigue &amp; Durability</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== GTA ===== -->
-<div class="timeline-item" data-year="2026">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Jan 2026 – Present</span>
-        <h3>Graduate Teaching Assistant</h3>
-        <h4>The University of Akron</h4>
-        <p>
-            Supporting undergraduate mechanical engineering courses through
-            grading, instructional support, and academic mentoring.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Graded assignments and exams using standardized rubrics.</li>
-                <li>Provided technical feedback and resolved grading concerns.</li>
-                <li>Assisted with coordination of office hours and course logistics.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">Teaching</span>
-                <span class="skill-tag">Communication</span>
-                <span class="skill-tag">Assessment</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== Battery CFD ===== -->
-<div class="timeline-item" data-year="2024">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Nov 2024 – Sept 2025</span>
-        <h3>Battery Thermal Management Research</h3>
-        <h4>ANSYS Fluent CFD Simulation</h4>
-
-        <p>
-            CFD-based optimization of liquid cooling strategies for lithium-ion battery packs.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Developed high-fidelity CFD thermal models validated against experimental data with &lt;5% error.</li>
-                <li>Compared 5 cooling channel designs, from serpentine paths to parallel mini-channels.</li>
-                <li>Optimized a variable-width serpentine channel that reduced peak temperature gradients by &gt;5 &deg;C.</li>
-                <li>Improved temperature uniformity by ~15%, projecting up to 20% longer cycle life under high loads.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">ANSYS Fluent</span>
-                <span class="skill-tag">CFD</span>
-                <span class="skill-tag">Thermal Management</span>
-            </div>
-            <p><a href="project file/battery cooling.html" class="link-arrow">View project details</a></p>
-        </div>
-    </div>
-</div>
-
-<!-- ===== Publications ===== -->
-<div class="timeline-item" data-year="2024">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">2024</span>
-        <h3>Two Peer-Reviewed Publications</h3>
-        <h4>IOP Conference Series: Earth and Environmental Science, vol. 1385</h4>
-
-        <p>
-            Published research on sustainable hydropower manufacturing and on EV energy consumption
-            and range after an IC-to-electric conversion.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>“Sustainable Manufacturing Practices in the Hydropower Industry: A Review”, Art. no. 012017. <a href="https://doi.org/10.1088/1755-1315/1385/1/012017" target="_blank" rel="noopener">DOI 10.1088/1755-1315/1385/1/012017</a></li>
-                <li>“Integrated analysis of on-road energy consumption and range optimization in the conversion of an IC engine vehicle to a battery-electric vehicle: a comprehensive research study”. <a href="https://doi.org/10.1088/1755-1315/1385/1/012024" target="_blank" rel="noopener">DOI 10.1088/1755-1315/1385/1/012024</a></li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">Research</span>
-                <span class="skill-tag">Sustainability</span>
-                <span class="skill-tag">Electric Vehicles</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== ESTRL RA ===== -->
-<div class="timeline-item" data-year="2023">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Jun 2023 – Nov 2025</span>
-        <h3>Research Assistant</h3>
-        <h4>Energy Systems &amp; Technology Research Laboratory (ESTRL), Kathmandu University</h4>
-
-        <p>
-            Conducted applied research in electric mobility, EV powertrain modeling,
-            battery health prognostics, and system-level simulation.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Engineered a modular vehicle platform with four interchangeable configurations for rural transportation, designed for a complete role change in under 60 minutes (funded by the Royal Norwegian Embassy through the Energize Nepal Program, Aug 2023 – Oct 2024).</li>
-                <li>Led system integration and simulation for converting a public ICE bus to an electric drivetrain.</li>
-                <li>Developed MATLAB/Simulink powertrain models validated against real-world driving cycles, projecting a ~60% reduction in energy cost per kilometer.</li>
-                <li>Built ML-based battery SOH models (&gt;95% prediction accuracy) using real-time data from five public electric buses, supporting predictive maintenance and second-life battery modeling.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">EV Powertrain</span>
-                <span class="skill-tag">MATLAB/Simulink</span>
-                <span class="skill-tag">Battery SOH</span>
-                <span class="skill-tag">Machine Learning</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== Building Energy ML ===== -->
-<div class="timeline-item" data-year="2023">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Jan 2023 – Aug 2023</span>
-        <h3>Building Energy Consumption Prediction for Nepal</h3>
-        <h4>Machine Learning Project</h4>
-
-        <p>
-            Built a machine learning model to predict energy consumption in buildings across Nepal.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Collected data on weather, building materials, occupancy patterns, and energy use.</li>
-                <li>Pre-processed the data and applied regression algorithms for prediction.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Regression</span>
-                <span class="skill-tag">Data Analysis</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== DoR Internship ===== -->
-<div class="timeline-item" data-year="2023">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Jan 2023 – Mar 2023</span>
-        <h3>Intern: Heavy Equipment Division</h3>
-        <h4>Department of Roads, Government of Nepal · Baneshwor, Kathmandu</h4>
-
-        <p>
-            Hands-on mechanical maintenance and diagnostics for heavy and light vehicles.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Performed routine maintenance on trucks, bulldozers, and excavators.</li>
-                <li>Assisted senior engineers in diagnosing engine, transmission, and brake faults and kept detailed maintenance records.</li>
-                <li>Gained hands-on skills in lathe operations, arc welding, and forklift operation.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">Mechanical Repair</span>
-                <span class="skill-tag">Diagnostics</span>
-                <span class="skill-tag">Heavy Equipment</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== Shell Eco-marathon ===== -->
-<div class="timeline-item" data-year="2022">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Oct 2022 – Nov 2022</span>
-        <h3>Vehicle Optimization &amp; Design Team</h3>
-        <h4>Team Junkiri · Shell Eco-marathon Asia 2022, Lombok, Indonesia</h4>
-
-        <p>
-            Designed and helped build a lightweight, aerodynamic three-wheeler for the Shell Eco-marathon.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Designed the vehicle in SolidWorks and led technical work on fabrication, engine installation, and electronic fuel injection tuning.</li>
-                <li>Performed structural and aerodynamic analyses in ANSYS Workbench.</li>
-                <li>Helped the vehicle pass technical inspections and compete successfully.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">SolidWorks</span>
-                <span class="skill-tag">ANSYS Workbench</span>
-                <span class="skill-tag">Fabrication</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ===== IC to EV ===== -->
-<div class="timeline-item" data-year="2020">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">May 2020 – Apr 2021</span>
-        <h3>IC Engine to Electric Vehicle Conversion</h3>
-        <h4>Kathmandu University · Student Project</h4>
-
-        <p>
-            Converted a 28-year-old Maruti 800 into a fully electric vehicle.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Designed and installed the electric drivetrain, including motor, battery pack, and controls.</li>
-                <li>Tested and optimized the vehicle, showing that retrofitting is a feasible way to cut emissions.</li>
-            </ul>
-            <div class="skills-used">
-                <span class="skill-tag">EV Conversion</span>
-                <span class="skill-tag">Electrical Integration</span>
-                <span class="skill-tag">Testing</span>
-            </div>
-            <p><a href="project file/ic to electric.html" class="link-arrow">View project details</a></p>
-        </div>
-    </div>
-</div>
-
-<!-- ===== Bachelor's ===== -->
-<div class="timeline-item education" data-year="2018">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <span class="timeline-date">Aug 2018 – May 2023</span>
-        <h3>B.E. in Mechanical Engineering</h3>
-        <h4>Kathmandu University · Dhulikhel, Nepal</h4>
-
-        <p>
-            Undergraduate mechanical engineering education with emphasis on EV systems,
-            thermodynamics, simulation, and energy efficiency.
-        </p>
-
-        <button class="expand-btn">Read More</button>
-        <div class="timeline-details">
-            <ul>
-                <li>Dissertation: “Research and Analysis on the Factors Affecting the On-Road Energy Consumption and Range of an Electric Vehicle.”</li>
-                <li>Extensive use of CAD, FEA, and simulation tools.</li>
-                <li>Foundation for later research in EVs and battery systems.</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- =========================
-     Footer
-========================= -->
-<footer class="footer-modern">
-    <div class="container">
-        <div class="footer-brand">
-        <h3 class="footer-logo">Biraj Kharel</h3>
-        <p>
-            Advancing data‑driven mechanical engineering for sustainable mobility and energy systems.
-        </p>
-    </div>
-        <div class="footer-bottom">
-        <p>© 2026 Biraj Kharel. All rights reserved.</p>
-    </div>
-</div>
-</footer>
-
-<script src="js/main.js"></script>
-<script src="js/theme.js"></script>
-<script src="js/timeline.js"></script>
-
+    <div class="status-foot"><span>Design history · 10 features · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script>
+(function () {
+  const all = document.querySelectorAll('.feat');
+  document.getElementById('expand').onclick = () => all.forEach(d => d.open = true);
+  document.getElementById('collapse').onclick = () => all.forEach(d => d.open = false);
+  function openHash() { const el = location.hash && document.getElementById(location.hash.slice(1)); if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView({ block: 'start' }); } }
+  window.addEventListener('hashchange', openHash); openHash();
+})();
+</script>
+<script src="js/site-data.js?v=202611232304"></script>
+<script src="js/fusion.js?v=202611232304"></script>
 </body>
 </html>

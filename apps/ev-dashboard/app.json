@@ -1,0 +1,14 @@
+{
+ "version": "20261123223138",
+ "entrypoint": "Home.py",
+ "requirements": [
+  "matplotlib"
+ ],
+ "files": {
+  "Home.py": "src/Home.py",
+  "pages/2_📈_Drive Cycle Data.py": "src/pages/2_drive_cycle.py",
+  "pages/3_👤_User Input.py": "src/pages/3_user_input.py",
+  "pages/4_🧮The_Matrix.py": "src/pages/4_the_matrix.py",
+  "sample_drive_cycle.csv": "src/sample_drive_cycle.csv"
+ }
+}

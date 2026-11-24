@@ -3,188 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battery Liquid Cooling CFD | Biraj Kharel</title>
-    <meta name="description" content="CFD optimization of liquid cooling channel designs for lithium-ion battery packs using ANSYS Fluent, by Biraj Kharel.">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/project-detail.css">
-    <style>
-        .outcomes-list { list-style-type: none; padding-left: 0; margin-top: 1.5rem; }
-        .outcomes-list li { position: relative; padding-left: 25px; margin-bottom: 1rem; color: var(--text-secondary); }
-        .outcomes-list li::before { content: '\2714'; position: absolute; left: 0; color: var(--accent-primary); font-weight: 700; }
-    </style>
+    <title>Enhancing Battery Cycle Life Through Optimized Liquid Cooling | Biraj Kharel</title>
+    <meta name="description" content="ANSYS Fluent study of 5 cooling-channel designs; the best cut peak gradients by &gt;5 °C and improved uniformity by 15%.">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="../css/fusion.css?v=202611232304">
 </head>
-<body>
+<body data-page="p-cooling" data-root="../">
+<main class="canvas" id="main">
+  <div class="canvas-inner">
+    <div class="crumb"><i class="ti ti-cube"></i> <a href="../index.html">Biraj_Kharel v26</a> &rsaquo; <a href="../projects.html">Components</a> &rsaquo; Battery_Liquid_Cooling <span class="ver-chip">v5</span></div>
 
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../index.html">
-                    <span class="logo-text">Biraj</span>
-                    <span class="logo-accent">Kharel</span>
-                </a>
-            </div>
-
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../projects.html">Projects</a></li>
-                <li><a href="../timeline.html">Timeline</a></li>
-                <li><a href="../gallery.html">Gallery</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-            </ul>
-
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Project Hero -->
-    <header class="project-hero">
-        <div class="project-hero-content">
-            <div class="project-tags">
-                <span class="tag">CFD</span>
-                <span class="tag">ANSYS Fluent</span>
-                <span class="tag">Thermal Management</span>
-            </div>
-            <h1 class="project-title-large">Enhancing Battery Cycle Life Through Optimized Liquid Cooling</h1>
-            <p class="project-subtitle-large">
-                A CFD study of liquid cooling channel designs for lithium-ion battery packs, aimed at lowering
-                peak temperatures, evening out the temperature across the pack, and extending battery life.
-            </p>
-        </div>
+    <header class="pd-hero">
+      <div>
+        <div class="fname-line"><i class="ti ti-box"></i> Battery_Liquid_Cooling · Nov 2024 – Sept 2025 · Research project</div>
+        <h1 class="page-title">Enhancing Battery Cycle Life Through Optimized Liquid Cooling</h1>
+        <p class="page-sub">A CFD study of liquid cooling channel designs for lithium-ion packs, aimed at lower peak temperatures, a more uniform pack, and longer battery life.</p>
+        <div class="keywords"><a class="kw" href="../projects.html#simulation">Simulation</a><a class="kw" href="../projects.html#research">Research &amp; papers</a><span class="kw hot">ANSYS Fluent</span><span class="kw hot">CFD</span><span class="kw hot">Thermal management</span></div>
+        
+      </div>
+      <div class="pd-hero-media zoomable"><img src="../project images/battery thermal modelling.png" alt="CFD temperature contour of a liquid-cooled battery module"></div>
     </header>
 
-    <main class="project-detail-container">
-        <div class="project-main-image">
-            <img src="../project images/battery thermal modelling.png" alt="CFD temperature contour of a liquid-cooled battery module">
-        </div>
+    <section class="section"><div class="section-head"><i class="ti ti-ruler-measure"></i><h2>Measure</h2><span class="rule"></span></div><div class="measure"><div class="m"><div class="v">&lt;5%</div><div class="k">Model error vs. experiment</div></div><div class="m"><div class="v">5</div><div class="k">Channel designs compared</div></div><div class="m"><div class="v">−5 °C</div><div class="k">Peak gradient reduction</div></div><div class="m"><div class="v">15%</div><div class="k">Better temperature uniformity</div></div><div class="m"><div class="v">up to 20%</div><div class="k">Projected cycle-life gain</div></div></div></section>
 
-        <div class="project-layout">
+    <div class="pd-layout section">
+      <div class="pd-main"><section class="dialog pd-sec" id="s1"><div class="dialog-head"><i class="ti ti-target"></i> The challenge</div><div class="dialog-body prose"><p>Lithium-ion cells age faster when hot, and unevenly when some cells run hotter than others. Under high loads a poor cooling plate leaves hot spots that shorten the whole pack&#x27;s life and raise safety risk.</p></div></section><section class="dialog pd-sec" id="s2"><div class="dialog-head"><i class="ti ti-route"></i> Approach</div><div class="dialog-body prose"><ul class="checks"><li><b>CFD model:</b> built a conjugate heat-transfer model of the module and cooling plate in ANSYS Fluent.</li><li><b>Validation:</b> matched experimental temperature data within 5%.</li><li><b>Design study:</b> compared five channel layouts, from standard serpentine to parallel mini-channels.</li><li><b>Optimization:</b> developed a variable-width serpentine channel that speeds up coolant over known hot spots.</li></ul></div></section><section class="dialog pd-sec" id="s3"><div class="dialog-head"><i class="ti ti-checklist"></i> Results</div><div class="dialog-body prose"><ul class="checks"><li>Peak temperature gradients across the pack reduced by more than 5 °C.</li><li>Temperature uniformity improved by about 15%.</li><li>Projected battery cycle-life increase of up to 20% under high load.</li></ul></div></section></div>
+      <aside class="pd-side">
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-list-tree"></i> In this component</div><div class="pd-toc"><a class="node d1" href="#s1"><i class="ti ti-target ico comp"></i><span class="lbl">The challenge</span></a><a class="node d1" href="#s2"><i class="ti ti-route ico comp"></i><span class="lbl">Approach</span></a><a class="node d1" href="#s3"><i class="ti ti-checklist ico comp"></i><span class="lbl">Results</span></a></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-info-square"></i> Properties</div><div class="dialog-body"><table class="props"><tr><td>Timeline</td><td>Nov 2024 – Sept 2025</td></tr><tr><td>Type</td><td>Research project</td></tr><tr><td>Key skills</td><td>CFD, heat transfer</td></tr></table></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-tool"></i> Tools &amp; technologies</div><div class="dialog-body"><ul class="tool-list"><li><i class="ti ti-temperature"></i>ANSYS Fluent</li><li><i class="ti ti-cube"></i>SolidWorks</li><li><i class="ti ti-brand-python"></i>Python / Excel post-processing</li></ul></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-link"></i> Links</div><div class="dialog-body pd-links"><a class="btn primary" href="mailto:bk233@uakron.edu?subject=Battery%20cooling%20CFD" ><i class="ti ti-mail"></i>Ask about this project</a><a class="btn" href="../projects.html"><i class="ti ti-arrow-left"></i>All components</a></div></div>
+        <div class="dialog"><div class="dialog-head"><i class="ti ti-components"></i> Related components</div><div class="pd-rel"><a class="rel" href="battery-soh.html"><i class="ti ti-box"></i><span><b>Battery_SOH_Prognostics</b><small>Battery State-of-Health Prognostics</small></span><i class="ti ti-chevron-right"></i></a><a class="rel" href="energy consumption.html"><i class="ti ti-box"></i><span><b>EV_Energy_Range_Study</b><small>On-Road EV Energy Consumption and Range</small></span><i class="ti ti-chevron-right"></i></a></div></div>
+      </aside>
+    </div>
 
-            <!-- Left Column -->
-            <div class="project-main-content">
+    <nav class="pd-pager section" aria-label="More components">
+      <a href="ic to electric.html"><i class="ti ti-arrow-left"></i><span><small>Previous component</small>Maruti 800: IC Engine to Electric Vehicle Conversion</span></a>
+      <a href="energy consumption.html" class="next"><span><small>Next component</small>On-Road EV Energy Consumption and Range</span><i class="ti ti-arrow-right"></i></a>
+    </nav>
 
-                <div class="content-card">
-                    <section id="challenge">
-                        <h2>The Challenge</h2>
-                        <p>
-                            Lithium-ion cells age faster when they run hot, and they age unevenly when some cells in a
-                            pack run hotter than others. Under high loads, a poorly designed cooling plate leaves hot spots
-                            that shorten the cycle life of the whole pack and raise safety risks. The goal of this project
-                            was to find a cooling channel layout that keeps the pack both cooler and more uniform without
-                            adding much pumping cost.
-                        </p>
-                    </section>
-                </div>
-
-                <div class="content-card">
-                    <section id="approach">
-                        <h2>My Approach</h2>
-                        <ul class="responsibilities-list">
-                            <li><strong>High-fidelity CFD model:</strong> Built a conjugate heat transfer model of the battery module and cooling plate in ANSYS Fluent.</li>
-                            <li><strong>Validation:</strong> Checked the model against experimental temperature data, with less than 5% error.</li>
-                            <li><strong>Design study:</strong> Compared 5 cooling channel designs, from standard serpentine paths to parallel mini-channels.</li>
-                            <li><strong>Targeted optimization:</strong> Developed a variable-width serpentine channel that speeds up the coolant over known thermal hot spots.</li>
-                        </ul>
-                    </section>
-                </div>
-
-                <div class="content-card">
-                    <section id="results">
-                        <h2>Results &amp; Impact</h2>
-                        <p>The optimized variable-width serpentine design performed best of the five configurations:</p>
-                        <ul class="outcomes-list">
-                            <li><strong>Lower gradients:</strong> Reduced peak temperature gradients across the pack by more than 5&nbsp;&deg;C.</li>
-                            <li><strong>More uniform pack:</strong> Improved temperature uniformity by about 15%.</li>
-                            <li><strong>Longer life:</strong> Projected to increase battery cycle life by up to 20% under high-load conditions.</li>
-                        </ul>
-                    </section>
-                </div>
-
-            </div>
-
-            <!-- Right Column -->
-            <aside class="project-sidebar">
-                <div class="sidebar-sticky-wrapper">
-                    <div class="sidebar-card">
-                        <h3>📊 Project Snapshot</h3>
-                        <ul class="snapshot-list">
-                            <li><span class="info-label">Timeline</span><span>Nov 2024 – Sept 2025</span></li>
-                            <li><span class="info-label">Type</span><span>Research Project</span></li>
-                            <li><span class="info-label">Key Skills</span><span>CFD, Heat Transfer, Design Optimization</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-card">
-                        <h3>🛠️ Tools &amp; Technologies</h3>
-                        <ul class="tool-list">
-                            <li><span class="tool-icon">🌡️</span>ANSYS Fluent (CFD)</li>
-                            <li><span class="tool-icon">📐</span>SolidWorks (Geometry)</li>
-                            <li><span class="tool-icon">📈</span>Python / Excel (Post-processing)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="../projects.html" class="back-link">&larr; Back to All Projects</a>
-            </aside>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer-modern">
-        <div class="container">
-            <a href="#" class="back-to-top" aria-label="Back to top">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 19V5M5 12l7-7 7 7"/>
-                </svg>
-            </a>
-
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">Biraj Kharel</h3>
-                    <p>Building smarter, cleaner systems for a sustainable future.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../projects.html">Projects</a></li>
-                        <li><a href="../timeline.html">Timeline</a></li>
-                        <li><a href="../gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-social">
-                    <h4 class="footer-heading">Connect</h4>
-                    <div class="social-icon-group">
-                        <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="https://github.com/Birazk" target="_blank" class="social-icon" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Biraj Kharel. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/theme.js"></script>
-    <script src="../js/main.js"></script>
+    <div class="status-foot"><span>Battery_Liquid_Cooling v5 · 3 features · 0 errors</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
+<script src="../js/site-data.js?v=202611232304"></script>
+<script src="../js/fusion.js?v=202611232304"></script>
 </body>
 </html>

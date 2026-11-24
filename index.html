@@ -5,755 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biraj Kharel | Mechanical Engineer - Machine Learning, FEM & Neural Networks</title>
     <meta name="description" content="Portfolio of Biraj Kharel, Mechanical Engineer interested in machine learning, finite element modeling, and neural networks, with work in computational mechanics, rubber durability, EV systems, and battery health prediction.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/fusion.css?v=202611232304">
+    <style>
+        .portrait { position: relative; justify-self: center; width: min(360px, 100%); }
+        .portrait .frame { position: relative; border-radius: 6px; overflow: hidden; border: 2px solid var(--select); box-shadow: 0 0 0 4px var(--select-soft), var(--shadow); background: #e9ecef; }
+        .portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; }
+        .portrait .grip { position: absolute; width: 9px; height: 9px; background: #fff; border: 2px solid var(--select); }
+        .portrait .g1 { left: -5px; top: -5px; } .portrait .g2 { right: -5px; top: -5px; } .portrait .g3 { left: -5px; bottom: -5px; } .portrait .g4 { right: -5px; bottom: -5px; }
+        .portrait .sel { position: absolute; left: 0; top: -26px; font-family: var(--mono); font-size: 11px; color: #fff; background: var(--select); padding: 2px 8px; border-radius: 3px 3px 0 0; }
+        .dimline { position: absolute; font-family: var(--mono); font-size: 11px; color: var(--sketch); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+        .dimline.v { right: -14px; top: 0; bottom: 0; transform: translateX(100%); flex-direction: column; justify-content: center; }
+        .dimline.v::before, .dimline.v::after { content: ""; flex: 1; width: 1px; background: var(--sketch); }
+        .dimline.v span { writing-mode: vertical-rl; transform: rotate(180deg); padding: 6px 0; }
+        .dimline.h { left: 0; right: 0; bottom: -30px; }
+        .dimline.h::before, .dimline.h::after { content: ""; flex: 1; height: 1px; background: var(--sketch); }
+        .research-card { display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; }
+        .research-card .icon { width: 56px; height: 56px; border-radius: 8px; display: grid; place-items: center; background: var(--orange-soft); color: var(--orange); font-size: 30px; }
+        .pipeline { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+        .pipeline span { font-family: var(--mono); font-size: 11px; padding: 2px 8px; background: #f1f3f5; border-radius: 3px; color: var(--text-2); }
+        .pipeline i { color: var(--text-3); align-self: center; font-size: 12px; }
+        @media (max-width: 1000px) { .portrait { margin-top: 30px; } .dimline.v { display: none; } .research-card { grid-template-columns: 1fr; } }
+    </style>
 </head>
+<body data-page="home" data-root="">
 
-<body>
-    <!-- Animated Background -->
-    <div class="animated-bg">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-    </div>
+<main class="canvas" id="main">
+  <div class="canvas-inner">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
+    <div class="crumb"><i class="ti ti-cube"></i> Biraj_Kharel v26 &rsaquo; Named Views &rsaquo; Home</div>
 
-            <!-- Logo -->
-            <div class="nav-logo">
-                <a href="index.html">
-                    <span class="logo-text">Biraj</span>
-                    <span class="logo-accent">Kharel</span>
-                </a>
-            </div>
-
-            <!-- Menu Links -->
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-
-                    <!-- Hamburger Menu Icon -->
-            <div class="hamburger" aria-label="Mobile menu toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>Biraj<br><span class="accent">Kharel</span></h1>
+        <div class="role"><span class="dot"></span> Mechanical Engineer · Akron, Ohio</div>
+        <p class="lead">
+          I build engineering models that learn. My work combines <b>finite element modeling</b>,
+          <b>machine learning</b>, and <b>neural networks</b>, including physics-informed neural networks,
+          to predict how materials, vehicles, and batteries behave and age.
+        </p>
+        <div class="keywords">
+          <a class="kw hot" href="about.html#skills-ml">Machine Learning</a><a class="kw hot" href="about.html#skills-sim">FEM / FEA</a><a class="kw hot" href="about.html#skills-ml">Neural Networks</a>
+          <a class="kw" href="research.html">PINNs</a><a class="kw" href="research.html">Abaqus</a><a class="kw" href="project file/modular_vehicle.html">ANSYS</a><a class="kw" href="project file/battery cooling.html">CFD</a><a class="kw" href="project file/Public Bus Conversion.html">EV Powertrains</a><a class="kw" href="project file/battery-soh.html">Battery SOH</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-modern">
-        <div class="container">
-            <div class="hero-grid">
-
-                <div class="hero-content" data-aos="fade-right">
-                    <div class="hero-badge">
-                        <span class="badge-dot"></span>
-                        <span>Available for collaboration</span>
-                    </div>
-
-                    <h1 class="hero-main-title">
-                        Biraj Kharel
-                    </h1>
-
-                    <p class="hero-lead">
-                        <strong>Mechanical Engineer</strong> interested in machine learning, finite element modeling (FEM),
-                        and neural networks, including physics-informed neural networks, applied to computational
-                        mechanics, rubber durability, digital twins, EV powertrains, battery health, and thermal management.
-                    </p>
-
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <h3>3+</h3>
-                            <p>Years of Research Experience</p>
-                        </div>
-
-                        <div class="stat-divider"></div>
-
-                        <div class="stat-item">
-                            <h3>95%+</h3>
-                            <p>Battery SOH ML Accuracy</p>
-                        </div>
-
-                        <div class="stat-divider"></div>
-
-                        <div class="stat-item">
-                            <h3>2</h3>
-                            <p>Peer-Reviewed Publications</p>
-                        </div>
-                    </div>
-
-                    <div class="hero-cta">
-                        <a href="#contact" class="btn btn-gradient">Let's Connect</a>
-
-                        <a href="Biraj-Kharel-CV.pdf" class="btn btn-outline" target="_blank">
-                            <span>My CV</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div class="social-links-modern">
-                        <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-btn" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </a>
-
-                        <a href="https://github.com/Birazk" target="_blank" class="social-btn" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-
-                        <a href="mailto:bk233@uakron.edu" class="social-btn" aria-label="Email">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-visual" data-aos="fade-left">
-                    <div class="visual-card glass-effect">
-                        <div class="card-decoration"></div>
-
-                        <div class="profile-section">
-                            <div class="profile-avatar">
-                                <img src="Index photos/biraz2026.jpg" alt="Portrait of Biraj Kharel">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="cta">
+          <a class="btn primary" href="projects.html"><i class="ti ti-box"></i> Open projects</a>
+          <a class="btn" href="Biraj-Kharel-CV.pdf" target="_blank"><i class="ti ti-file-cv"></i> Download CV</a>
+          <a class="btn" href="mailto:bk233@uakron.edu"><i class="ti ti-mail"></i> Contact</a>
         </div>
+      </div>
+
+      <div class="portrait">
+        <span class="sel"><i class="ti ti-pointer"></i> Body1 · Biraj</span>
+        <a class="frame" href="about.html" style="display:block"><img src="Index photos/headshot.jpg" alt="Portrait of Biraj Kharel"></a>
+        <span class="grip g1"></span><span class="grip g2"></span><span class="grip g3"></span><span class="grip g4"></span>
+        <div class="dimline v"><span>3+ yrs research</span></div>
+        <div class="dimline h"><span>ML &middot; FEM &middot; NN</span></div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-enhanced">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Who I Am</span>
-                <h2 class="section-title-modern">Bridging Engineering Physics with Data Intelligence</h2>
-
-                <p class="section-description">
-                    I am a Mechanical Engineer with a strong interest in machine learning, finite element modeling,
-                    and neural networks. I use FEM for material behavior, structural mechanics, transient response,
-                    heat transfer, and thermo-mechanical analysis, and I apply neural networks and physics-informed
-                    neural networks (PINNs) to constitutive modeling, parameter identification, surrogate modeling,
-                    and remaining-life prediction. My experience spans tire aging and durability, electric-vehicle
-                    powertrains, battery state-of-health prognostics, thermal management, and experimental,
-                    data-driven engineering analysis.
-                </p>
-            </div>
-
-            <div class="about-grid">
-
-                <div class="about-main-content">
-                    <div class="content-block">
-                        <h3>My Expertise</h3>
-
-                        <p>
-                            I combine mechanical engineering fundamentals with simulation, machine learning, 
-                            and experimental data to solve complex problems in materials, mobility, and energy systems.
-                        </p>
-
-                        <br>
-
-                        <h4>Rubber Aging, Durability &amp; Fatigue</h4>
-                        <p>
-                            I characterize the dynamic behavior of tire elastomers (20&ndash;1500 Hz) and build Abaqus
-                            workflows that simulate thermal, humidity, oxygen, and ozone aging, feeding Endurica-based
-                            fatigue and durability analysis.
-                        </p>
-
-                        <br>
-
-                        <h4>Physics-Informed Machine Learning</h4>
-                        <p>
-                            I am developing physics-informed neural network approaches to discover hyperelastic 
-                            constitutive models from sparse experimental data by embedding mechanical constraints 
-                            directly into neural loss functions.
-                        </p>
-
-                        <br>
-
-                        <h4>ABAQUS, FEM & Tire Wear Modeling</h4>
-                        <p>
-                            I use Abaqus-based finite element simulations with machine learning and experimental aging data 
-                            to model performance degradation and predict tire wear rates under different environmental 
-                            and operational conditions.
-                        </p>
-
-                        <br>
-
-                        <h4>EV Powertrain Modeling & System Integration</h4>
-                        <p>
-                            I have worked on electric vehicle conversion, public bus electrification, drivetrain component 
-                            selection, and MATLAB/Simulink-based powertrain modeling to validate performance against 
-                            real-world driving cycles.
-                        </p>
-
-                        <br>
-
-                        <h4>Battery Health Prognostics & Thermal Management</h4>
-                        <p>
-                            My work includes battery State-of-Health prediction using machine learning, real-time BMS data, 
-                            CAN bus/OBD-II data acquisition, and CFD-based battery cooling design for improved cycle life 
-                            and safety.
-                        </p>
-                    </div>
-
-                    <div class="content-block">
-                        <h3>What Drives Me</h3>
-                        <p>
-                            I am motivated by research that turns engineering models into practical, real-world systems. 
-                            Whether working on tire wear prediction, electric mobility, battery health, or sustainable energy, 
-                            I aim to build solutions that are technically rigorous, data-driven, and useful for society.
-                        </p>
-                    </div>
-
-                    <div class="expertise-grid">
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                                </svg>
-                            </div>
-                            <h4>Research to Real-World Impact</h4>
-                            <p>Translating models, simulations, and data into practical engineering systems.</p>
-                        </div>
-
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
-                                    <line x1="16" y1="8" x2="2" y2="22"></line>
-                                    <line x1="17.5" y1="15" x2="9" y2="15"></line>
-                                </svg>
-                            </div>
-                            <h4>Simulation-Driven Engineering</h4>
-                            <p>Using FEA, CFD, and system-level modeling to validate designs before deployment.</p>
-                        </div>
-
-                        <div class="expertise-item">
-                            <div class="expertise-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                                </svg>
-                            </div>
-                            <h4>Data-Driven Optimization</h4>
-                            <p>Applying ML, analytics, and experimental data to improve performance, reliability, and sustainability.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-sidebar">
-                    <div class="timeline-card glass-effect">
-                        <h4>Current Role</h4>
-
-                        <div class="timeline-item-modern">
-                            <div class="timeline-dot active"></div>
-                            <div>
-                                <h5>Graduate Research Assistant</h5>
-                                <p>The University of Akron</p>
-                                <span>Jan 2026 - Present</span>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item-modern">
-                            <div class="timeline-dot"></div>
-                            <div>
-                                <h5>Graduate Teaching Assistant</h5>
-                                <p>The University of Akron</p>
-                                <span>Jan 2026 - Present</span>
-                            </div>
-                        </div>
-
-                        <a href="timeline.html" class="link-arrow">View Full Timeline</a>
-                    </div>
-
-                    <div class="education-card glass-effect">
-                        <h4>Education</h4>
-
-                        <div class="edu-item">
-                            <div class="edu-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h5>Ph.D. Mechanical Engineering</h5>
-                                <p>The University of Akron | 2026 - Present</p>
-                            </div>
-                        </div>
-
-                        <div class="edu-item">
-                            <div class="edu-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h5>B.E. Mechanical Engineering</h5>
-                                <p>Kathmandu University | 2018 - 2023</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    <!-- Measure results -->
+    <section class="section" style="margin-top:56px;">
+      <div class="section-head"><i class="ti ti-ruler-measure"></i><h2>Measure</h2><span class="rule"></span></div>
+      <div class="measure">
+        <a class="m" href="project file/battery-soh.html"><div class="v">&gt;95%</div><div class="k">Battery SOH prediction accuracy</div></a>
+        <a class="m" href="project file/Public Bus Conversion.html"><div class="v">~60%</div><div class="k">Projected energy-cost cut, bus EV conversion</div></a>
+        <a class="m" href="project file/modular_vehicle.html"><div class="v">2.09</div><div class="k">Min. safety factor, modular EV chassis</div></a>
+        <a class="m" href="project file/battery cooling.html"><div class="v">&minus;5&nbsp;&deg;C</div><div class="k">Peak gradient drop, battery cooling CFD</div></a>
+        <a class="m" href="about.html#publications"><div class="v">2</div><div class="k">Peer-reviewed publications (IOP, 2024)</div></a>
+      </div>
     </section>
 
-    <!-- Research Highlights Section -->
-    <section class="research-highlights">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Research & Projects</span>
-                <h2 class="section-title-modern">Research Highlights</h2>
-
-                <p class="section-description">
-                    Selected work across machine learning, finite element simulation, EV systems, 
-                    battery prognostics, CFD thermal management, and sustainable energy technologies.
-                </p>
-            </div>
-
-            <div class="expertise-grid">
-                <div class="expertise-item">
-                    <h4>Tire Elastomer Dynamics &amp; Aging</h4>
-                    <p>
-                        Dynamic characterization of tire elastomers with controlled temperature, prestrain, and
-                        strain amplitude, plus Abaqus aging simulations and Endurica-based fatigue analysis.
-                    </p>
-                </div>
-
-                <div class="expertise-item">
-                    <h4>Physics-Informed Neural Networks for Materials Modeling</h4>
-                    <p>
-                        Developing PINN-based methods to discover hyperelastic constitutive models 
-                        from sparse experimental data using embedded mechanical constraints.
-                    </p>
-                </div>
-
-                <div class="expertise-item">
-                    <h4>Tire Wear Prediction Using ML and Abaqus FEM</h4>
-                    <p>
-                        Integrating experimental aging data, machine learning, and Abaqus simulations 
-                        to predict tire wear and performance degradation under varied conditions.
-                    </p>
-                </div>
-
-                <div class="expertise-item">
-                    <h4>Electric Public Bus Conversion</h4>
-                    <p>
-                        Led system integration and MATLAB/Simulink modeling for converting an ICE public bus 
-                        into a battery-electric drivetrain with a projected 60% reduction in energy cost per kilometer.
-                    </p>
-                </div>
-
-                <div class="expertise-item">
-                    <h4>Battery SOH Prognostics</h4>
-                    <p>
-                        Developed machine learning models with over 95% accuracy to forecast battery degradation 
-                        using real-time data from a fleet of five public electric buses.
-                    </p>
-                </div>
-
-                <div class="expertise-item">
-                    <h4>Battery Liquid Cooling CFD Simulation</h4>
-                    <p>
-                        Built ANSYS Fluent CFD models for battery thermal management, achieving less than 5% 
-                        validation error and improving pack temperature uniformity.
-                    </p>
-                </div>
-
-                <div class="expertise-item">
-                    <h4>IC Engine to EV Retrofitting</h4>
-                    <p>
-                        Converted a 28-year-old Maruti 800 into a fully electric vehicle, including drivetrain, 
-                        battery pack, controls, testing, and optimization.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <!-- Components -->
+    <section class="section">
+      <div class="section-head"><i class="ti ti-components"></i><h2>Components</h2><span class="rule"></span><a href="projects.html" style="font-size:13px;">View all <i class="ti ti-arrow-right"></i></a></div>
+      <div class="comp-grid">
+        <a class="comp" href="project file/modular_vehicle.html">
+          <div class="thumb"><img src="project images/modular electric vehicle.png" alt="Modular EV chassis render" loading="lazy"><span class="ver">v12</span></div>
+          <div class="body"><div class="fname"><i class="ti ti-box"></i> Modular_EV_Chassis</div><h3>Modular EV for rural Nepal</h3><p>Space-frame chassis validated with static, crash, and modal FEA.</p><div class="tags"><span>ANSYS</span><span>SolidWorks</span><span>FEA</span></div></div>
+        </a>
+        <a class="comp" href="project file/Public Bus Conversion.html">
+          <div class="thumb"><img src="project images/Front.jpg" alt="Eicher city bus" loading="lazy"><span class="ver">v6</span></div>
+          <div class="body"><div class="fname"><i class="ti ti-box"></i> Bus_EV_Conversion</div><h3>Diesel bus to electric</h3><p>Simulink powertrain model projecting ~60% lower energy cost per km.</p><div class="tags"><span>Simulink</span><span>EV</span></div></div>
+        </a>
+        <a class="comp" href="project file/battery cooling.html">
+          <div class="thumb"><img src="project images/battery thermal modelling.png" alt="Battery cooling CFD" loading="lazy"><span class="ver">v5</span></div>
+          <div class="body"><div class="fname"><i class="ti ti-box"></i> Battery_Liquid_Cooling</div><h3>Battery cooling CFD</h3><p>5 channel designs in ANSYS Fluent; 15% better temperature uniformity.</p><div class="tags"><span>Fluent</span><span>CFD</span></div></div>
+        </a>
+      </div>
     </section>
 
-    <!-- Publications Section -->
-    <section class="research-highlights" id="publications">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Publications</span>
-                <h2 class="section-title-modern">Peer-Reviewed Papers</h2>
-                <p class="section-description">
-                    Published in IOP Conference Series: Earth and Environmental Science, vol. 1385 (2024).
-                </p>
-            </div>
+    <div class="status-foot"><span>Ready · 13 components · 2 papers · 0 warnings</span><span>&copy; 2026 Biraj Kharel</span></div>
+  </div>
+</main>
 
-            <div class="expertise-grid">
-                <a class="expertise-item" href="https://doi.org/10.1088/1755-1315/1385/1/012017" target="_blank" rel="noopener" style="text-decoration:none;">
-                    <h4>Sustainable Manufacturing Practices in the Hydropower Industry: A Review</h4>
-                    <p>IOP Conf. Ser.: Earth Environ. Sci. 1385, 012017 (2024). DOI 10.1088/1755-1315/1385/1/012017</p>
-                </a>
-
-                <a class="expertise-item" href="https://doi.org/10.1088/1755-1315/1385/1/012024" target="_blank" rel="noopener" style="text-decoration:none;">
-                    <h4>Integrated Analysis of On-Road Energy Consumption and Range Optimization in the Conversion of an IC Engine Vehicle to a Battery-Electric Vehicle</h4>
-                    <p>IOP Conf. Ser.: Earth Environ. Sci. 1385, 012024 (2024). DOI 10.1088/1755-1315/1385/1/012024</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="certifications">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Credentials</span>
-                <h2 class="section-title-modern">Certifications & Training</h2>
-            </div>
-
-            <div class="cert-carousel-container" id="carousel-container">
-                <div class="cert-grid" id="cert-grid">
-
-                    <div class="cert-card" data-image="Certifications/Solidworks_ Surfacing.png">
-                        <img src="Certifications/Solidworks_ Surfacing.png" alt="SolidWorks Surfacing Professional" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>SolidWorks Surfacing Professional</h3>
-                            <p class="cert-year">2023</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Solidworks Mechanical Design.png">
-                        <img src="Certifications/Solidworks Mechanical Design.png" alt="SolidWorks Mechanical Design" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>SolidWorks Mechanical Design</h3>
-                            <p class="cert-year">2022</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/AutoDesk -Modelling and Desing for Manufacturing.png">
-                        <img src="Certifications/AutoDesk -Modelling and Desing for Manufacturing.png" alt="Autodesk Modeling and Design for Manufacturing" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>Autodesk Modeling and Design for Manufacturing</h3>
-                            <p class="cert-year">2023</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Excel.jpg">
-                        <img src="Certifications/Excel.jpg" alt="Excel Certificate" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>Data Analytics with Excel</h3>
-                            <p class="cert-year">2023</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Motors and Motor Control Circuit.png">
-                        <img src="Certifications/Motors and Motor Control Circuit.png" alt="Motors and Motor Control Circuits" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>Motors and Motor Control Circuits</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Sensors and Sensors Circuit Diagram.png">
-                        <img src="Certifications/Sensors and Sensors Circuit Diagram.png" alt="Sensors and Sensor Circuit Design" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>Sensors and Sensor Circuit Design</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Matlab _ Simulink Onramp.png">
-                        <img src="Certifications/Matlab _ Simulink Onramp.png" alt="MATLAB Simulink Onramp" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>MATLAB Simulink Onramp</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Matlab_Battery Onramp.png">
-                        <img src="Certifications/Matlab_Battery Onramp.png" alt="MATLAB Simscape Battery Onramp" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>MATLAB Simscape Battery Onramp</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/Supervised Machine Learning.png">
-                        <img src="Certifications/Supervised Machine Learning.png" alt="Supervised Machine Learning Certificate" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>Supervised Machine Learning</h3>
-                            <p class="cert-year">2023</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/RE100_Introduction to Renewable Energy.png">
-                        <img src="Certifications/RE100_Introduction to Renewable Energy.png" alt="Introduction to Renewable Energy Certificate" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>Introduction to Renewable Energy</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/ADB Energy Economics, Environment, and Policy.png">
-                        <img src="Certifications/ADB Energy Economics, Environment, and Policy.png" alt="ADBI Energy Economics, Environment, and Policy" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>ADBI Energy Economics, Environment, and Policy</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/ADBI - Renewable Energy.png">
-                        <img src="Certifications/ADBI - Renewable Energy.png" alt="ADBI Renewable Energy Certificate" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>ADBI Renewable Energy</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/ADBI Policy Maker - Low Carbon Cooling.png">
-                        <img src="Certifications/ADBI Policy Maker - Low Carbon Cooling.png" alt="ADBI Policy Maker Low-Carbon Cooling Certificate" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>ADBI Policy Maker: Low-Carbon Cooling</h3>
-                            <p class="cert-year">2025</p>
-                        </div>
-                    </div>
-
-                    <div class="cert-card" data-image="Certifications/COFAS-web.jpg">
-                        <img src="Certifications/COFAS-web.jpg" alt="COFAS Olympiad Certificate" class="cert-card-image">
-                        <div class="cert-content">
-                            <h3>COFAS Olympiad</h3>
-                            <p class="cert-year">2014</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Pagination Controls -->
-                <div class="pagination-wrap">
-                    <div class="pagination" id="pagination">
-                        <!-- Dots generated by JavaScript -->
-                    </div>
-
-                    <div class="pager-controls">
-                        <button id="prev-btn" class="pager-btn" aria-label="Previous page">←</button>
-                        <span id="page-info" class="page-info" aria-hidden="true">Page 1 of 1</span>
-                        <button id="next-btn" class="pager-btn" aria-label="Next page">→</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Image Modal -->
-        <div class="image-modal" id="image-modal" aria-hidden="true">
-            <div class="modal-inner">
-                <button class="close-modal" id="close-modal" aria-label="Close">&times;</button>
-                <img id="modal-image" src="" alt="Certificate preview">
-
-                <div class="modal-text-content">
-                    <h3 id="modal-title" class="modal-title"></h3>
-                    <p id="modal-desc" class="modal-desc"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills-modern">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Technical Skills</span>
-                <h2 class="section-title-modern">Tools & Technologies</h2>
-            </div>
-
-            <div class="skills-categories">
-
-                <div class="skill-category">
-                    <h3>Simulation & Engineering</h3>
-                    <div class="skill-items">
-                        <div class="skill-badge">ABAQUS</div>
-                        <div class="skill-badge">Endurica</div>
-                        <div class="skill-badge">Computational Mechanics</div>
-                        <div class="skill-badge">Viscoelastic Modeling</div>
-                        <div class="skill-badge">ANSYS Fluent</div>
-                        <div class="skill-badge">ANSYS Workbench</div>
-                        <div class="skill-badge">CFD Analysis</div>
-                        <div class="skill-badge">FEM Simulation</div>
-                        <div class="skill-badge">Thermal Management</div>
-                        <div class="skill-badge">EV Powertrain Modeling</div>
-                        <div class="skill-badge">Digital Twin Development</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Data, ML & Programming</h3>
-                    <div class="skill-items">
-                        <div class="skill-badge">Python</div>
-                        <div class="skill-badge">NumPy</div>
-                        <div class="skill-badge">Pandas</div>
-                        <div class="skill-badge">Scikit-learn</div>
-                        <div class="skill-badge">Matplotlib</div>
-                        <div class="skill-badge">SciPy</div>
-                        <div class="skill-badge">Machine Learning</div>
-                        <div class="skill-badge">PINNs</div>
-                        <div class="skill-badge">Battery SOH Prediction</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Design, Controls & Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-badge">MATLAB/Simulink</div>
-                        <div class="skill-badge">Optimization Toolbox</div>
-                        <div class="skill-badge">SolidWorks</div>
-                        <div class="skill-badge">Fusion 360</div>
-                        <div class="skill-badge">AutoCAD</div>
-                        <div class="skill-badge">LabVIEW</div>
-                        <div class="skill-badge">CAN Bus</div>
-                        <div class="skill-badge">OBD-II</div>
-                        <div class="skill-badge">Excel/VBA</div>
-                        <div class="skill-badge">Crystal Ball (Oracle)</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-modern">
-        <div class="container">
-
-            <div class="section-header">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title-modern">Let's Work Together</h2>
-
-                <p class="section-description">
-                    Have a project, research idea, or collaboration opportunity in mind? 
-                    I am open to discussing work related to mechanical engineering, data-driven modeling, 
-                    electric mobility, materials, battery systems, and sustainable energy technologies.
-                </p>
-            </div>
-
-            <div class="contact-methods">
-
-                <a href="mailto:bk233@uakron.edu" class="contact-method contact-method-link">
-                    <div class="method-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-
-                    <div class="method-text">
-                        <h4>Email</h4>
-                        <p class="link-simulation">bk233@uakron.edu</p>
-                        <p class="link-simulation">birazkharel@gmail.com</p>
-                    </div>
-                </a>
-
-                <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="contact-method contact-method-link">
-                    <div class="method-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </div>
-
-                    <div class="method-text">
-                        <h4>LinkedIn</h4>
-                        <p class="link-simulation">Connect with me</p>
-                    </div>
-                </a>
-
-                <div class="contact-method">
-                    <div class="method-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-
-                    <div class="method-text">
-                        <h4>Location</h4>
-                        <p>Akron, Ohio, USA</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-modern">
-        <div class="container">
-
-            <a href="#" class="back-to-top" aria-label="Back to top">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 19V5M5 12l7-7 7 7"/>
-                </svg>
-            </a>
-
-            <div class="footer-content">
-
-                <div class="footer-brand">
-                    <h3 class="footer-logo">Biraj Kharel</h3>
-                    <p>
-                        Advancing data-driven mechanical engineering for smarter materials, 
-                        cleaner mobility, and sustainable energy systems.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-social">
-                    <h4 class="footer-heading">Connect</h4>
-
-                    <div class="social-icon-group">
-                        <a href="https://www.linkedin.com/in/birajkharel" target="_blank" class="social-icon" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </a>
-
-                        <a href="https://github.com/Birazk" target="_blank" class="social-icon" aria-label="GitHub">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Biraj Kharel. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
+<noscript><p style="padding:20px">Navigation: <a href="projects.html">Projects</a> · <a href="research.html">Research</a> · <a href="about.html">About</a> · <a href="timeline.html">Timeline</a> · <a href="gallery.html">Renders</a></p></noscript>
+<script src="js/site-data.js?v=202611232304"></script>
+<script src="js/fusion.js?v=202611232304"></script>
 </body>
 </html>
