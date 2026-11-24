@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             visibleItems = [];
             galleryItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-                const isVisible = filter === 'all' || category === filter;
+                const categories = (item.getAttribute('data-category') || '').toLowerCase().split(' ');
+                const isVisible = filter === 'all' || categories.includes(filter);
                 item.style.display = isVisible ? 'block' : 'none'; // Use display instead of a class for simplicity
                 if (isVisible) {
                     visibleItems.push(item);

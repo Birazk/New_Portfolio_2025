@@ -8,14 +8,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // SCRIPT 1: ACTIVE NAVIGATION LINK HIGHLIGHTING
     // -------------------------------------------------------------
     const navLinks = document.querySelectorAll('.nav-menu a');
-    const currentPageUrl = window.location.href;
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     navLinks.forEach(link => {
-        // If the link's href is part of the current page's URL, make it active
-        if (currentPageUrl.includes(link.href)) {
-            link.classList.add('active');
-        }
+        const linkPage = (link.getAttribute('href') || '').split('/').pop();
+        link.classList.toggle('active', linkPage === currentPage);
     });
+
+    // -------------------------------------------------------------
+    // MOBILE MENU (hamburger) - shared by every page
+    // -------------------------------------------------------------
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 
     // -------------------------------------------------------------
     // SCRIPT 2: BACK-TO-TOP BUTTON VISIBILITY
